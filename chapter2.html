@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html class="light" lang="ru"><head>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
     tailwind.config = {
@@ -16,10 +15,13 @@
                     "background-light": "#F9F7F1",
                     "background-dark": "#1A2B3C",
                     "accent-blue": "#1A2B3C",
+                    "deepblue": "#1A2B3C",
+                    "terracotta": "#C06C50",
+                    "ivory": "#F9F7F1",
                 },
                 fontFamily: {
                     "display": ["Inter", "sans-serif"],
-                    "serif": ["Playfair Display", "serif"]
+                    "serif": ["Merriweather", "serif"]
                 },
                 borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
             },
@@ -27,8 +29,17 @@
     }
 </script>
 <style>
-    .serif-title { font-family: 'Playfair Display', serif; }
+    .serif-title { font-family: 'Merriweather', serif; }
+    .serif-header { font-family: 'Merriweather', serif; }
     .bg-ivory { background-color: #F9F7F1; }
+    .hero-bg {
+        background-image:
+            radial-gradient(circle at 50% 50%, transparent 120px, #1a2b3c04 121px, #1a2b3c04 122px, transparent 123px),
+            radial-gradient(circle at 50% 50%, transparent 200px, #1a2b3c03 201px, #1a2b3c03 202px, transparent 203px),
+            radial-gradient(circle at 50% 50%, transparent 300px, #c06c5004 301px, #c06c5004 302px, transparent 303px),
+            radial-gradient(circle at 50% 50%, transparent 420px, #1a2b3c03 421px, #1a2b3c03 422px, transparent 423px),
+            radial-gradient(circle at 50% 50%, transparent 560px, #c06c5003 561px, #c06c5003 562px, transparent 563px);
+    }
     .text-deep-blue { color: #1A2B3C; }
     .border-terracotta { border-color: #C06C50; }
     .hover-reveal:hover img { filter: grayscale(0%); transform: scale(1.05); }
@@ -65,7 +76,7 @@
 
     /* ── Блок 3: Solution cards ── */
     .solution-number {
-        font-family: 'Playfair Display', serif;
+        font-family: 'Merriweather', serif;
         font-size: 5rem;
         line-height: 1;
         font-weight: 700;
@@ -104,47 +115,37 @@
 <main>
 
 <!-- ════ Article Hero ════ -->
-<section class="relative pt-12 pb-24 px-6 overflow-hidden">
-    <div class="max-w-5xl mx-auto">
-        <nav aria-label="Breadcrumb" class="flex gap-2 text-sm font-medium text-primary mb-12">
-            <a class="hover:underline" href="#">Главная</a>
-            <span>/</span>
-            <a class="hover:underline" href="#">Цикл: Современный секуляризм</a>
-            <span>/</span>
-            <span class="text-accent-blue/60">Глава 2</span>
-        </nav>
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-8">
-                <h1 class="serif-title text-5xl md:text-7xl text-accent-blue dark:text-slate-100 leading-[1.1] mb-8">
-                    Социальные функции религии: Солидарность, благотворительность и их темная сторона
-                </h1>
-                <div class="flex flex-wrap items-center gap-6 text-sm border-t border-accent-blue/10 pt-6">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-primary">schedule</span>
-                        <span class="font-bold">Время чтения: 10 мин</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-primary">biotech</span>
-                        <span class="font-bold">Фокус: Дюркгейм, Bonding/Bridging</span>
-                    </div>
-                </div>
-            </div>
-            <div class="lg:col-span-4 relative">
-                <div class="w-full aspect-square relative flex items-center justify-center">
-                    <div class="absolute inset-0 bg-primary/5 rounded-full blur-3xl"></div>
-                    <div class="relative w-full h-full flex items-center justify-center">
-                        <div class="absolute w-4 h-4 bg-primary rounded-full animate-pulse"></div>
-                        <div class="absolute w-2 h-2 bg-accent-blue rounded-full translate-x-12 translate-y-8"></div>
-                        <div class="absolute w-2 h-2 bg-accent-blue rounded-full -translate-x-16 -translate-y-4"></div>
-                        <div class="absolute w-3 h-3 border-2 border-primary rounded-full -translate-x-8 translate-y-16"></div>
-                        <div class="absolute w-64 h-64 border border-dashed border-accent-blue/20 rounded-full animate-[spin_20s_linear_infinite]"></div>
-                        <div class="absolute w-48 h-48 border border-accent-blue/10 rounded-full animate-[spin_15s_linear_reverse_infinite]"></div>
-                    </div>
+<header class="relative min-h-screen flex flex-col justify-center px-6 lg:px-24 overflow-hidden border-b border-deepblue/10">
+    <div class="absolute inset-0 hero-bg -z-10"></div>
+    <nav class="absolute top-12 left-6 lg:left-24">
+        <ul class="flex space-x-2 text-sm uppercase tracking-widest text-deepblue/60 font-medium">
+            <li><a class="hover:text-terracotta transition-colors" href="#">Главная</a></li>
+            <li>/</li>
+            <li class="text-terracotta">Социальные функции религии</li>
+        </ul>
+    </nav>
+    <div class="max-w-5xl mt-20">
+        <h1 class="serif-header text-5xl md:text-7xl leading-tight mb-8">
+            Социальные функции религии: <br/>
+            <span class="italic text-terracotta">Солидарность,</span> благотворительность и их темная сторона
+        </h1>
+        <div class="flex flex-wrap gap-8 items-center border-t border-deepblue/20 pt-8">
+            <div class="flex flex-wrap gap-4 items-center">
+                <span class="text-xs font-semibold uppercase tracking-tighter text-deepblue/50">Фокус</span>
+                <div class="flex gap-2">
+                    <span class="px-3 py-1 bg-deepblue text-ivory text-xs rounded-full">Дюркгейм</span>
+                    <span class="px-3 py-1 bg-deepblue text-ivory text-xs rounded-full">Солидарность</span>
+                    <span class="px-3 py-1 bg-deepblue text-ivory text-xs rounded-full">Благотворительность</span>
                 </div>
             </div>
         </div>
     </div>
-</section>
+    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+    </div>
+</header>
 
 <!-- ════ Solidarity Block ════ -->
 <section class="py-24 px-6 dark:bg-slate-900/50 bg-[#F3F0E8]">
@@ -169,6 +170,29 @@
             <div class="space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed">
                 <p>Эмиль Дюркгейм рассматривал религию как «единую систему верований и практик, относящихся к вещам священным... которые объединяют в одну моральную общину всех, кто им следует».</p>
                 <p>В этом блоке мы анализируем, как религиозные институты создают связующую ткань между личным опытом индивида и масштабными структурами общества, формируя фундамент того, что мы называем социальным капиталом.</p>
+                <!-- Карточка-пример: Религия в гражданском обществе -->
+                <div class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 p-6 shadow-sm mt-4">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-accent-blue/10 flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-accent-blue">groups</span>
+                        </div>
+                        <h4 class="font-bold text-accent-blue dark:text-slate-100">Религия за пределами храмов</h4>
+                    </div>
+                    <div class="flex gap-6 mb-4">
+                        <div class="text-center">
+                            <p class="text-3xl font-black text-primary leading-none">40%</p>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wide mt-1 leading-tight">собраний гражданского общества упоминают религию</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-3xl font-black text-accent-blue leading-none">33%</p>
+                            <p class="text-[10px] text-slate-500 uppercase tracking-wide mt-1 leading-tight">включают молитву или пение — даже в светских организациях</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">Влияние религии на социальные связи выходит далеко за пределы формальных религиозных институтов.</p>
+                    <div class="pt-3 mt-3 border-t border-slate-100 dark:border-slate-700">
+                        <p class="text-[10px] text-slate-400 italic">Источник: Indiana University, 2025 — «Religion's Pervasive Role in Civil Society: Systematic Social Observation»</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -201,11 +225,28 @@
                 </div>
             </div>
             <div class="group relative overflow-hidden rounded-2xl aspect-[4/5] hover-reveal">
-                <img class="w-full h-full object-cover gray-scale" alt="People sharing a meal together" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbbwE-pgXJcX2vW2eDGU0wawqWQoIWSJkO0cYq1A2UudpuHcGi-caOcWmH9p1FsWXUYYb8hp-Y9Cg5nIAM9JrS_Sj4wt3XApV9inrFnDUMLJL1Gy9zV9GF_C9ci_WN09Lm-wpGjfp8IcNmstbwnFnbwT5HqDt-AwpljgbuzX0YFwSyOlxKf_Q18uOpF_cA-ZSStbdX-LLl5hgPZwIVnBAFqVJxFFpKKVQv3plTCrg9NLx_mBlkbufHT5PA2WLvUzR2IsTOix"/>
+                <img class="w-full h-full object-cover gray-scale" alt="People sharing a meal together" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbbwE-pgXJcX2vW2eDGU0wawqWQoIWSJkO0cYq1A2UudpuHcGi-caOcWmH9p1FsWXUBzjRMVQUY8hp-Y9Cg5nIAM9JrS_Sj4wt3XApV9inrFnDUMLJL1Gy9zV9GF_C9ci_WN09Lm-wpGjfp8IcNmstbwnFnbwT5HqDt-AwpljgbuzX0YFwSyOlxKf_Q18uOpF_cA-ZSStbdX-LLl5hgPZwIVnBAFqVJxFFpKKVQv3plTCrg9NLx_mBlkbufHT5PA2WLvUzR2IsTOix"/>
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-8 text-white translate-y-4 group-hover:translate-y-0 transition-transform">
                     <h3 class="font-bold text-xl mb-2">Langar Tradition</h3>
                     <p class="text-sm opacity-0 group-hover:opacity-100 transition-opacity">Радикальное гостеприимство вне зависимости от касты или веры.</p>
                 </div>
+            </div>
+        </div>
+
+        <!-- Пример: Конгрегации как первая линия помощи -->
+        <div class="mt-8 p-8 bg-white dark:bg-slate-800 rounded-2xl border-l-4 border-terracotta shadow-sm">
+            <div class="flex items-center gap-3 mb-4">
+                <span class="material-symbols-outlined text-primary text-2xl">emergency</span>
+                <h3 class="serif-title text-xl text-accent-blue dark:text-slate-100 italic">Конгрегации как первая линия помощи</h3>
+            </div>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-3">
+                По мере сокращения государственной поддержки роль религиозных общин становится критической. На уровне сообществ <strong>конгрегации являются первой линией помощи</strong> для тех, кто сталкивается с трудностями — от бездомности до семейных кризисов.
+            </p>
+            <p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                Исследования показывают, что религиозные организации оказывают значительное влияние на благополучие получателей помощи: содействуют личностному росту, социальной интеграции, экономическому улучшению, здоровью и образовательному продвижению.
+            </p>
+            <div class="pt-3 mt-3 border-t border-slate-100 dark:border-slate-700">
+                <p class="text-[10px] text-slate-400 italic">Источник: Social Welfare Structure and Practice; Faith-Based Organizations & Social Services</p>
             </div>
         </div>
 
@@ -342,6 +383,17 @@
                 <div class="px-6 pb-6 text-slate-600 dark:text-slate-400 leading-relaxed space-y-3">
                     <p>Основная критика функционализма (в т.ч. теории Дюркгейма) заключается в игнорировании дисфункций религии. Исторически и в современности религия часто служит инструментом легитимации войны и терроризма.</p>
                     <p>Религиозный экстремизм обеспечивает мощную внутреннюю сплочённость для одной стороны конфликта, полностью дегуманизируя оппонентов и снимая моральные ограничения на насилие. Солидарность «внутри» питается страхом и ненавистью «снаружи».</p>
+                    <!-- Кейс-блок: Мьянма -->
+                    <div class="mt-3 bg-red-50 dark:bg-red-900/10 border border-red-200 dark:border-red-800/30 rounded-lg p-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="material-symbols-outlined text-red-500 text-lg">warning</span>
+                            <span class="text-xs font-bold text-red-700 dark:text-red-400 uppercase tracking-wider">Кейс: Мьянма, 2017</span>
+                        </div>
+                        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                            Насилие буддистов Ракхайн против мусульман-рохинджа было оправдано как «подавление повстанцев», но по сути являлось этнической чисткой с религиозной мотивацией. Этот случай демонстрирует многомерность экстремизма: политическое, теологическое, социальное и ритуальное измерения комбинируются по-разному в зависимости от контекста. Здесь политическое измерение оказалось наиболее важным для понимания природы насилия.
+                        </p>
+                        <p class="text-[10px] text-slate-400 italic mt-2">Источник: PMC, 2019 — «Dimensions of Religious Extremism»</p>
+                    </div>
                 </div>
             </details>
 

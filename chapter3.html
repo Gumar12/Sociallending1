@@ -3,7 +3,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Chapter 3: Religion and the State</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <script id="tailwind-config">
     tailwind.config = {
@@ -16,10 +16,12 @@
                     "ivory": "#F9F7F1",
                     "background-light": "#f8f6f6",
                     "background-dark": "#221610",
+                    "deepblue": "#1A2B3C",
+                    "terracotta": "#C06C50",
                 },
                 fontFamily: {
-                    "display": ["Playfair Display", "serif"],
-                    "serif": ["Playfair Display", "serif"],
+                    "display": ["Inter", "sans-serif"],
+                    "serif": ["Merriweather", "serif"],
                     "body": ["Inter", "sans-serif"]
                 },
                 borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
@@ -31,7 +33,14 @@
     .diagonal-split { clip-path: polygon(0 0, 100% 0, 0 100%); }
     .diagonal-split-reverse { clip-path: polygon(100% 0, 100% 100%, 0 100%); }
     body { font-family: 'Inter', sans-serif; }
-    h1, h2, h3, .serif-font { font-family: 'Playfair Display', serif; }
+    h1, h2, h3, .serif-font { font-family: 'Merriweather', serif; }
+    .serif-header { font-family: 'Merriweather', serif; }
+    .hero-bg {
+        background-image:
+            repeating-linear-gradient(90deg, #1a2b3c06 0px, #1a2b3c06 2px, transparent 2px, transparent 60px),
+            repeating-linear-gradient(90deg, #c06c5004 0px, #c06c5004 1px, transparent 1px, transparent 120px),
+            linear-gradient(180deg, transparent 0%, #1a2b3c03 50%, transparent 100%);
+    }
 
     /* ── Блок 2: модели стран ── */
     .country-card {
@@ -56,7 +65,7 @@
         box-shadow: 0 20px 40px rgba(26,43,60,0.12);
     }
     .sol-num {
-        font-family: 'Playfair Display', serif;
+        font-family: 'Merriweather', serif;
         font-size: 5rem;
         line-height: 1;
         font-weight: 700;
@@ -79,7 +88,7 @@
         <div class="flex items-center gap-6">
             <div class="flex items-center gap-2 text-deep-blue">
                 <span class="material-symbols-outlined text-primary">balance</span>
-                <h2 class="font-display font-bold text-lg tracking-tight">ТЕМА 3: Взаимодействие религии и светских институтов</h2>
+                <h2 class="font-display font-bold text-lg tracking-tight">Взаимодействие религии и светских институтов</h2>
             </div>
         </div>
     </div>
@@ -88,22 +97,36 @@
     </div>
 </nav>
 
-<!-- Hero Section: Split-Screen -->
-<header class="relative min-h-[90vh] flex flex-col md:flex-row overflow-hidden">
-    <div class="w-full md:w-1/2 h-full absolute md:relative z-0 opacity-40 md:opacity-100">
-        <div class="absolute inset-0 bg-deep-blue/10 diagonal-split z-10"></div>
-        <div class="h-full w-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-O7nJy1wiYnFfNFNyX8KUvoGbe1YAQRWTeX7C5NaHgrTiRdlfyp91Q0mYtUzJNtrq2008blv-1dzr2eooWsOLTYsiuuweeLBgShFINwiLGU_HYLoelsQQ28ZN7QGt5ZaGY690LBl7w4nUefbg_EYBvU5RoKPyQ9PDoXavLb_X5nmNLFH7OW4ShgnTgJ2W3ZvSyI8gtLJLciY7vr8kUJ9A2MPyHCN2kqqZLX2-rPziKQOAkigOTGevg6rDj13iMTp3Aw8ZuAUtsGin')"></div>
-    </div>
-    <div class="w-full md:w-1/2 h-full absolute md:relative z-0 opacity-20 md:opacity-100 right-0">
-        <div class="absolute inset-0 bg-[#C06C50]/10 diagonal-split-reverse z-10"></div>
-        <div class="h-full w-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBg1KAfy5AmjiOT5KuSQGtB8juwC2hu3U9akQUBmjeAVob59khfNcjg8czphBID6y3m-weWQRvpjlSXOdPR6Wf4VM2s8_vAceYq1tYk4-2yLOrgNkz7N1odKIBSru0jPUkhJ_p6NCqH6DDDT73xd7H45dYYDtBOZFFd0nAsKt4swK6nCkw6KLaPD1LcmcY05mLtgyxRa-IfWbX82zf2A_e15OS4VYzoUSXg3rKTg4mcKCj9pTVbhK6plv7yTrJTnwxAK3aSnv_j15iA')"></div>
-    </div>
-    <div class="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
-        <div class="max-w-4xl text-center px-6 pointer-events-auto bg-ivory/80 md:bg-transparent p-8 md:p-0 rounded-xl">
-            <span class="text-primary font-bold uppercase tracking-widest text-sm">Unit II: Institutional Dynamics</span>
-            <h1 class="text-5xl md:text-7xl font-bold text-deep-blue mt-4 mb-6 leading-tight">ТЕМА 3: Взаимодействие религии и светских институтов (государства)</h1>
-            <p class="text-xl text-slate-700 max-w-2xl mx-auto mb-10 font-body">Постсекулярное общество и «Деприватизация» (Анализ явления)</p>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex flex-col justify-center px-6 lg:px-24 overflow-hidden border-b border-deepblue/10">
+    <div class="absolute inset-0 hero-bg -z-10"></div>
+    <nav class="absolute top-12 left-6 lg:left-24">
+        <ul class="flex space-x-2 text-sm uppercase tracking-widest text-deepblue/60 font-medium">
+            <li><a class="hover:text-terracotta transition-colors" href="#">Главная</a></li>
+            <li>/</li>
+            <li class="text-terracotta">Взаимодействие религии и светских институтов</li>
+        </ul>
+    </nav>
+    <div class="max-w-5xl mt-20">
+        <h1 class="serif-header text-5xl md:text-7xl leading-tight mb-8">
+            Взаимодействие религии и <br/>
+            <span class="italic text-terracotta">светских институтов</span> (государства)
+        </h1>
+        <div class="flex flex-wrap gap-8 items-center border-t border-deepblue/20 pt-8">
+            <div class="flex flex-wrap gap-4 items-center">
+                <span class="text-xs font-semibold uppercase tracking-tighter text-deepblue/50">Фокус</span>
+                <div class="flex gap-2">
+                    <span class="px-3 py-1 bg-deepblue text-ivory text-xs rounded-full">Государство</span>
+                    <span class="px-3 py-1 bg-deepblue text-ivory text-xs rounded-full">Секуляризм</span>
+                    <span class="px-3 py-1 bg-deepblue text-ivory text-xs rounded-full">Деприватизация</span>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
     </div>
 </header>
 
@@ -136,7 +159,7 @@
 <section class="py-20 bg-ivory border-b border-deep-blue/10">
     <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-14">
-            <span class="text-primary font-bold uppercase tracking-widest text-xs">Слайд 3.1: Сравнительный анализ</span>
+            <span class="text-primary font-bold uppercase tracking-widest text-xs">Сравнительный анализ</span>
             <h2 class="text-3xl md:text-4xl font-serif text-deep-blue mt-3 mb-4">Институциональные модели: от лаицизма до симфонии</h2>
             <p class="text-slate-500 max-w-2xl mx-auto text-sm leading-relaxed">
                 Единой универсальной модели секуляризма не существует. На практике принцип отделения церкви от государства реализуется кардинально по-разному.
@@ -227,7 +250,7 @@
     <div class="max-w-6xl mx-auto px-6">
         <div class="flex flex-col items-center mb-16 text-center">
             <span class="material-symbols-outlined text-deep-blue text-5xl mb-4">gavel</span>
-            <h2 class="text-4xl font-serif text-deep-blue">Слайд 3.2: Правовые коллизии: Право на свободу vs. Общий закон (Доказательная база)</h2>
+            <h2 class="text-4xl font-serif text-deep-blue">Правовые коллизии: Право на свободу vs. Общий закон (Доказательная база)</h2>
             <div class="w-24 h-1 bg-primary mt-4"></div>
         </div>
         <div class="grid lg:grid-cols-3 gap-12 relative">
@@ -293,7 +316,7 @@
     <div class="max-w-6xl mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-                <h2 class="text-4xl md:text-5xl font-serif mb-8 border-b-2 border-primary pb-4 inline-block">Слайд 3.3: Инструментализация религии авторитарными режимами</h2>
+                <h2 class="text-4xl md:text-5xl font-serif mb-8 border-b-2 border-primary pb-4 inline-block">Инструментализация религии авторитарными режимами</h2>
                 <p class="text-lg opacity-80 mb-8 leading-relaxed font-body">В то время как западные демократии спорят о свободе совести, авторитарные режимы часто используют религиозные структуры для легитимации власти или подавляют веру как конкурирующий центр силы.</p>
                 <div class="space-y-8">
 
@@ -360,7 +383,7 @@
 <section class="py-24 bg-white border-t border-deep-blue/10">
     <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-16">
-            <span class="text-primary font-bold uppercase tracking-widest text-xs">Слайд 3.5: Академические решения</span>
+            <span class="text-primary font-bold uppercase tracking-widest text-xs">Академические решения</span>
             <h2 class="text-4xl md:text-5xl font-serif text-deep-blue mt-3 mb-4">Стратегии разрешения конфликтов</h2>
             <p class="text-slate-500 max-w-xl mx-auto text-base">
                 Как сбалансировать религиозную свободу и права граждан в демократическом обществе?

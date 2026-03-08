@@ -15,6 +15,9 @@
                     "deep-blue": "#1a2b3c",
                     "background-light": "#f9f7f1",
                     "background-dark": "#1a2b3c",
+                    "deepblue": "#1a2b3c",
+                    "terracotta": "#c06c50",
+                    "ivory": "#f9f7f1",
                 },
                 fontFamily: {
                     "sans": ["Inter", "sans-serif"],
@@ -29,11 +32,21 @@
     .fade-out-text {
         background: linear-gradient(to right, currentColor 70%, transparent 100%);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     .pixel-dissolve {
         background-image: radial-gradient(#c06c50 1px, transparent 1px);
         background-size: 8px 8px;
+    }
+    .serif-header { font-family: 'Merriweather', serif; }
+    .hero-bg {
+        background-image:
+            radial-gradient(#1a2b3c 0.8px, transparent 0.8px),
+            radial-gradient(#c06c50 0.5px, transparent 0.5px);
+        background-size: 24px 24px, 16px 16px;
+        background-position: 0 0, 8px 8px;
+        opacity: 0.08;
     }
 
     /* ── БЛОК 2: Карточки решений ── */
@@ -61,22 +74,37 @@
 <main>
 
 <!-- ════ Hero ════ -->
-<section class="relative min-h-[90vh] flex flex-col items-center justify-center px-6 overflow-hidden">
-    <div class="absolute inset-0 z-0 opacity-20 pixel-dissolve"></div>
-    <div class="relative z-10 max-w-5xl text-center">
-        <p class="text-primary font-bold tracking-[0.3em] uppercase mb-6">Цикл: Современный секуляризм / Глава 5 (Финал)</p>
-        <h1 class="font-serif text-5xl md:text-8xl text-deep-blue leading-tight mb-8 font-black">
-            Конец институтов и Духовный <span class="fade-out-text">супермаркет</span>
+<header class="relative min-h-screen flex flex-col justify-center px-6 lg:px-24 overflow-hidden border-b border-deepblue/10">
+    <div class="absolute inset-0 hero-bg -z-10"></div>
+    <nav class="absolute top-12 left-6 lg:left-24">
+        <ul class="flex space-x-2 text-sm uppercase tracking-widest text-deepblue/60 font-medium">
+            <li><a class="hover:text-terracotta transition-colors" href="#">Главная</a></li>
+            <li>/</li>
+            <li class="text-terracotta">Конец институтов и Духовный супермаркет</li>
+        </ul>
+    </nav>
+    <div class="max-w-5xl mt-20">
+        <h1 class="serif-header text-5xl md:text-7xl leading-tight mb-8">
+            Конец институтов и <br/>
+            <span class="italic text-terracotta">Духовный супермаркет</span>
         </h1>
-        <p class="text-xl md:text-2xl text-deep-blue/70 max-w-2xl mx-auto font-light italic">
-            Во что верит поколение Z в эпоху фрагментированной духовности и цифрового атомизма?
-        </p>
-        <div class="mt-16 animate-bounce">
-            <span class="material-symbols-outlined text-deep-blue text-4xl">keyboard_double_arrow_down</span>
+        <div class="flex flex-wrap gap-8 items-center border-t border-deepblue/20 pt-8">
+            <div class="flex flex-wrap gap-4 items-center">
+                <span class="text-xs font-semibold uppercase tracking-tighter text-deepblue/50">Фокус</span>
+                <div class="flex gap-2">
+                    <span class="px-3 py-1 bg-deepblue text-ivory text-xs rounded-full">Поколение Z</span>
+                    <span class="px-3 py-1 bg-deepblue text-ivory text-xs rounded-full">Духовность</span>
+                    <span class="px-3 py-1 bg-deepblue text-ivory text-xs rounded-full">Атомизм</span>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-transparent to-primary"></div>
-</section>
+    <div class="absolute bottom-12 left-1/2 -translate-x-1/2">
+        <svg class="w-6 h-6 text-terracotta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+        </svg>
+    </div>
+</header>
 
 <!-- ════ Scissors Chart + БЛОК 1 (статистика в сайдбаре) ════ -->
 <section class="max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
@@ -87,7 +115,7 @@
                 <svg class="absolute inset-0 w-full h-full overflow-visible" preserveAspectRatio="none">
                     <path d="M0 50 Q 250 100, 1000 350" fill="none" stroke="#1a2b3c" stroke-linecap="round" stroke-width="6"></path>
                     <path d="M0 350 Q 250 250, 1000 50" fill="none" stroke="#c06c50" stroke-dasharray="10 10" stroke-linecap="round" stroke-width="6"></path>
-                    <circle class="animate-ping opacity-75" cx="450" cy="200" fill="#c06c50" r="12"></circle>
+                    <circle class="opacity-75" cx="450" cy="200" fill="#c06c50" r="12"></circle>
                     <circle cx="450" cy="200" fill="#c06c50" r="8"></circle>
                 </svg>
                 <div class="absolute top-[180px] left-[470px]">
@@ -107,6 +135,18 @@
                     <span class="text-xs font-medium text-deep-blue/60 uppercase">Индивидуальный поиск</span>
                 </div>
             </div>
+        </div>
+
+        <!-- Пример: Деприватизация Казановы -->
+        <div class="mt-8 p-6 border-l-4 border-primary bg-primary/5 rounded-r-xl">
+            <div class="flex items-center gap-3 mb-3">
+                <span class="material-symbols-outlined text-primary text-xl">visibility</span>
+                <h3 class="font-serif text-lg text-deep-blue italic">Парадокс деприватизации</h3>
+            </div>
+            <p class="text-deep-blue/70 text-sm leading-relaxed mb-2">
+                Социолог <strong class="text-deep-blue">Хосе Казанова</strong> оспаривает классическую теорию секуляризации, описывая процесс <span style="text-decoration: underline dotted #c06c50; text-underline-offset: 4px; cursor: help;" title="Процесс возвращения религии в публичную сферу после периода приватизации">«деприватизации»</span> религии. Вопреки прогнозам, религиозные традиции не уходят в приватную сферу, а принимают новую публичную роль — от участия в политических кампаниях до использования религиозных аргументов в дебатах по социальным и этическим вопросам.
+            </p>
+            <p class="text-deep-blue/50 text-xs italic">Это объясняет, почему «ножницы» на графике выше не сходятся к нулю — институциональная вера трансформируется, но не исчезает.</p>
         </div>
     </div>
 
@@ -162,6 +202,26 @@
                 <p class="text-lg text-white/80 leading-relaxed font-light">
                     В условиях цифровой эпохи, «старые» формы сообществ замещаются алгоритмическими эхо-камерами. Мы наблюдаем переход от коллективного пения в хоре к медитации в одиночестве с приложением в смартфоне.
                 </p>
+                <!-- Пример: 4 модели отношений церкви и государства -->
+                <div class="mt-8 grid grid-cols-2 gap-3">
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+                        <p class="text-xs font-bold text-primary uppercase tracking-wide mb-1">Франция</p>
+                        <p class="text-xs text-white/60 leading-relaxed">Строгая laïcité — запрет религиозных символов в государственных учреждениях</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+                        <p class="text-xs font-bold text-primary uppercase tracking-wide mb-1">Великобритания</p>
+                        <p class="text-xs text-white/60 leading-relaxed">Государственная церковь — епископы заседают в Палате лордов</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+                        <p class="text-xs font-bold text-primary uppercase tracking-wide mb-1">Германия</p>
+                        <p class="text-xs text-white/60 leading-relaxed">Церковный налог — государство собирает налоги для признанных общин</p>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+                        <p class="text-xs font-bold text-primary uppercase tracking-wide mb-1">Россия</p>
+                        <p class="text-xs text-white/60 leading-relaxed">Особый статус — тесные связи РПЦ с государством</p>
+                    </div>
+                </div>
+                <p class="text-xs text-white/40 mt-3 italic">Разные модели — одна тенденция: границы между религией и светской сферой размываются повсеместно.</p>
             </div>
             <div class="relative aspect-square bg-white/5 rounded-2xl overflow-hidden group">
                 <div class="absolute inset-0 flex">
@@ -211,6 +271,22 @@
                 <p class="text-deep-blue/70 leading-relaxed">
                     Современный верующий не принимает «пакетные» решения догматических институтов. Он выступает в роли потребителя на «духовном рынке», выбирая те элементы, которые резонируют с его текущим психологическим состоянием.
                 </p>
+            </div>
+        </div>
+
+        <!-- Карточка-пример: Лукман «Невидимая религия» -->
+        <div class="mt-8 bg-background-light rounded-xl border border-deep-blue/10 p-6 shadow-sm border-l-4 border-l-deep-blue">
+            <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-lg bg-deep-blue/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-deep-blue">auto_stories</span>
+                </div>
+                <h4 class="font-serif text-lg text-deep-blue font-bold">Теоретический фундамент: Томас Лукман</h4>
+            </div>
+            <p class="text-sm text-deep-blue/70 leading-relaxed mb-2">
+                Феномен «духовного супермаркета» предвосхитил социолог <strong class="text-deep-blue">Томас Лукман</strong> в концепции <em>«невидимой религии»</em> (1967). По мере модернизации религия не исчезает, а приватизируется и индивидуализируется, становясь личным конструктором смыслов. Человек сам выбирает элементы из «священного космоса», формируя персональную систему трансцендентных значений. Именно эта «невидимая» форма религиозности создаёт почву для духовного супермаркета — бриколажа.
+            </p>
+            <div class="pt-3 border-t border-deep-blue/10">
+                <p class="text-[10px] text-slate-400 italic">Источник: Luckmann, T. — «The Invisible Religion: The Problem of Religion in Modern Society» (1967)</p>
             </div>
         </div>
         <div class="bg-primary text-white p-8 rounded-2xl flex flex-col justify-between">
