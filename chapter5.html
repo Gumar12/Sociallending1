@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#c06c50",
+                    "deep-blue": "#1a2b3c",
+                    "background-light": "#f9f7f1",
+                    "background-dark": "#1a2b3c",
+                },
+                fontFamily: {
+                    "sans": ["Inter", "sans-serif"],
+                    "serif": ["Merriweather", "serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+        },
+    }
+</script>
+<style>
+    .fade-out-text {
+        background: linear-gradient(to right, currentColor 70%, transparent 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .pixel-dissolve {
+        background-image: radial-gradient(#c06c50 1px, transparent 1px);
+        background-size: 8px 8px;
+    }
+
+    /* ── БЛОК 2: Карточки решений ── */
+    .solution-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .solution-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(26,43,60,0.10); }
+    .sol-num {
+        font-family: 'Merriweather', serif;
+        font-size: 5rem; line-height: 1; font-weight: 900;
+        color: rgba(26,43,60,0.05);
+        position: absolute; top: 8px; right: 16px;
+        user-select: none; pointer-events: none;
+    }
+    .sol-num-light { color: rgba(255,255,255,0.05); }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 selection:bg-primary selection:text-white font-sans">
+
+<header class="sticky top-0 z-50 w-full border-b border-deep-blue/10 bg-background-light/90 backdrop-blur-md px-6 lg:px-20 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-primary text-3xl">account_balance</span>
+        <span class="font-serif italic text-xl font-bold text-deep-blue">Современный секуляризм</span>
+    </div>
+</header>
+
+<main>
+
+<!-- ════ Hero ════ -->
+<section class="relative min-h-[90vh] flex flex-col items-center justify-center px-6 overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20 pixel-dissolve"></div>
+    <div class="relative z-10 max-w-5xl text-center">
+        <p class="text-primary font-bold tracking-[0.3em] uppercase mb-6">Цикл: Современный секуляризм / Глава 5 (Финал)</p>
+        <h1 class="font-serif text-5xl md:text-8xl text-deep-blue leading-tight mb-8 font-black">
+            Конец институтов и Духовный <span class="fade-out-text">супермаркет</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-deep-blue/70 max-w-2xl mx-auto font-light italic">
+            Во что верит поколение Z в эпоху фрагментированной духовности и цифрового атомизма?
+        </p>
+        <div class="mt-16 animate-bounce">
+            <span class="material-symbols-outlined text-deep-blue text-4xl">keyboard_double_arrow_down</span>
+        </div>
+    </div>
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-32 bg-gradient-to-b from-transparent to-primary"></div>
+</section>
+
+<!-- ════ Scissors Chart + БЛОК 1 (статистика в сайдбаре) ════ -->
+<section class="max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+    <div class="lg:col-span-8">
+        <h2 class="font-serif text-4xl text-deep-blue mb-8">The Scissors Chart: Переломный момент</h2>
+        <div class="bg-white dark:bg-deep-blue/10 p-8 rounded-xl border border-deep-blue/5 shadow-sm">
+            <div class="relative h-96 w-full flex flex-col justify-end">
+                <svg class="absolute inset-0 w-full h-full overflow-visible" preserveAspectRatio="none">
+                    <path d="M0 50 Q 250 100, 1000 350" fill="none" stroke="#1a2b3c" stroke-linecap="round" stroke-width="6"></path>
+                    <path d="M0 350 Q 250 250, 1000 50" fill="none" stroke="#c06c50" stroke-dasharray="10 10" stroke-linecap="round" stroke-width="6"></path>
+                    <circle class="animate-ping opacity-75" cx="450" cy="200" fill="#c06c50" r="12"></circle>
+                    <circle cx="450" cy="200" fill="#c06c50" r="8"></circle>
+                </svg>
+                <div class="absolute top-[180px] left-[470px]">
+                    <span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-tighter">SBNR Intersection</span>
+                </div>
+                <div class="flex justify-between mt-4 text-deep-blue/40 text-xs font-bold tracking-widest uppercase">
+                    <span>1990</span><span>2000</span><span>2010</span><span>2024</span>
+                </div>
+            </div>
+            <div class="mt-8 flex gap-8">
+                <div class="flex items-center gap-2">
+                    <div class="w-4 h-1 bg-deep-blue"></div>
+                    <span class="text-xs font-medium text-deep-blue/60 uppercase">Институциональная вера</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <div class="w-4 h-1 bg-primary border-t border-dashed border-primary"></div>
+                    <span class="text-xs font-medium text-deep-blue/60 uppercase">Индивидуальный поиск</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Сайдбар: оригинальный блок + БЛОК 1 под ним -->
+    <aside class="lg:col-span-4 lg:sticky lg:top-32 space-y-6">
+        <!-- Оригинальный блок -->
+        <div class="p-6 border-l-4 border-primary bg-primary/5">
+            <h3 class="font-serif text-xl text-deep-blue mb-4 italic">Крах классической теории</h3>
+            <p class="text-deep-blue/70 text-sm leading-relaxed">
+                Классическая теория секуляризации предсказывала полное исчезновение религии. Вместо этого мы наблюдаем эффект «ножниц»: церковная посещаемость падает, а потребность в трансцендентном растет, принимая новые, неинституциональные формы.
+            </p>
+        </div>
+
+        <!-- ── БЛОК 1: Статистика секуляризации ──
+             Вставлен ЗДЕСЬ — под «Крахом классической теории».
+             Логика: первый блок сайдбара формулирует тезис,
+             этот блок подкрепляет его эмпирическими данными Pew —
+             теория + факты = завершённый академический аргумент. -->
+        <div class="p-6 bg-deep-blue rounded-xl">
+            <div class="flex items-center gap-2 mb-4">
+                <span class="material-symbols-outlined text-primary text-lg">query_stats</span>
+                <h3 class="font-serif text-base text-white italic">Замедление секуляризации</h3>
+            </div>
+            <p class="text-white/70 text-sm leading-relaxed mb-5">
+                Несмотря на прогнозы о неизбежной гибели религии, эмпирические данные демонстрируют иную картину. После десятилетий спада доля христиан в США стабилизировалась, а рост «религиозно неаффилированных» существенно замедлился.
+            </p>
+            <!-- Мини-стат -->
+            <div class="bg-white/5 border border-white/10 rounded-xl p-4 flex items-center gap-4 mb-3">
+                <span class="text-3xl font-black text-primary leading-none">62%</span>
+                <p class="text-[11px] text-white/50 uppercase tracking-wide leading-tight">американцев идентифицируют себя как христиане (Pew, 2023–2024)</p>
+            </div>
+            <p class="text-[10px] text-white/30 italic">Это доказывает: религия не исчезает, а переживает структурную трансформацию.</p>
+        </div>
+        <!-- ── конец БЛОК 1 ── -->
+    </aside>
+</section>
+
+<!-- ════ Epidemic of Loneliness ════ -->
+<section class="bg-deep-blue text-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="mb-16">
+            <h2 class="font-serif text-5xl mb-4">Epidemic of Loneliness</h2>
+            <p class="text-white/60 max-w-xl">Упадок доверия к институтам коррелирует с ростом атомизации общества.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div>
+                    <span class="text-[120px] font-black leading-none text-primary/30 flex items-baseline">
+                        &lt; 30<span class="text-4xl ml-2">%</span>
+                    </span>
+                    <p class="text-xl font-medium tracking-wide uppercase text-primary -mt-4">Уровень институционального доверия</p>
+                </div>
+                <p class="text-lg text-white/80 leading-relaxed font-light">
+                    В условиях цифровой эпохи, «старые» формы сообществ замещаются алгоритмическими эхо-камерами. Мы наблюдаем переход от коллективного пения в хоре к медитации в одиночестве с приложением в смартфоне.
+                </p>
+            </div>
+            <div class="relative aspect-square bg-white/5 rounded-2xl overflow-hidden group">
+                <div class="absolute inset-0 flex">
+                    <div class="w-1/2 h-full bg-cover bg-center grayscale border-r border-white/20" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCPALpB95eW6672RWuOwl-aZYdN24TO3XC2HLIALSVy4dCHkLXEDPcX5tZznqpJGQKfND1emdxFa9fPLqYc-CeA7bm5u0lbQIBRK6gvLZKu99cncs1KrF2W3W-3GuFLpmtiD5yjOXtVKD_6nL6m3SNaH_Tv06U_3tse_DnqBQ4cI2s9hVFfXBQ3CVaLMeS4i1qq0ZWvrLt7PkxeiIp1v_nhXdT_WftJYhhg-CPoJeb-Cepv1yi37ucfXJmmvqTDoCOYVjLK-_toyPZS')"></div>
+                    <div class="w-1/2 h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCiaBsPXnkWA6Rv5ojAykg-opWCjrVI6A6KcCz3yFzGiQ9JKXmfD4LIVZ5H9SRtNCYpVmdj1-8k_nSsBTJdpI3B8ylnGX1WNRrEucMewi-UafgYLfVeps_d9wgPfowVer7MjmAfmOcm2Wp8GJHqJtdgtY5wzO5Qmv3ox_GF5cL6Srg6voawb6_barHrwdJEwxfQvF-SegRGg7x6N_8DX0cBGDZMtOxQoUVKTxerCN1eStDtmomo7wmvQ0b5tkBCP-gM01DMPjXqdTDI')"></div>
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-xl shadow-primary/20">
+                        <span class="material-symbols-outlined">unfold_more</span>
+                    </div>
+                </div>
+                <div class="absolute bottom-4 left-4 text-[10px] uppercase tracking-[0.2em] bg-black/50 px-3 py-1">Before</div>
+                <div class="absolute bottom-4 right-4 text-[10px] uppercase tracking-[0.2em] bg-black/50 px-3 py-1">After</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════ Spiritual Supermarket ════ -->
+<section class="max-w-7xl mx-auto px-6 py-24 bg-background-light">
+    <div class="text-center mb-16">
+        <h2 class="font-serif text-5xl text-deep-blue mb-4 tracking-tight">Spiritual Supermarket</h2>
+        <p class="text-deep-blue/60 text-lg">Концепция «бриколажа»: собирая веру из фрагментов</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 bg-white rounded-2xl p-10 border border-deep-blue/5 shadow-sm">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="aspect-square flex flex-col items-center justify-center gap-3 border-2 border-dashed border-primary/20 rounded-xl hover:bg-primary/5 transition-all cursor-move group">
+                    <span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">self_improvement</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest">Йога</span>
+                </div>
+                <div class="aspect-square flex flex-col items-center justify-center gap-3 border-2 border-dashed border-primary/20 rounded-xl hover:bg-primary/5 transition-all cursor-move group">
+                    <span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">playing_cards</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest">Таро</span>
+                </div>
+                <div class="aspect-square flex flex-col items-center justify-center gap-3 border-2 border-dashed border-primary/20 rounded-xl hover:bg-primary/5 transition-all cursor-move group">
+                    <span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">spa</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest">Мантры</span>
+                </div>
+                <div class="aspect-square flex flex-col items-center justify-center gap-3 border-2 border-dashed border-primary/20 rounded-xl hover:bg-primary/5 transition-all cursor-move group">
+                    <span class="material-symbols-outlined text-4xl text-primary group-hover:scale-110 transition-transform">psychology</span>
+                    <span class="text-[10px] font-bold uppercase tracking-widest">Терапия</span>
+                </div>
+            </div>
+            <div class="mt-12 p-8 bg-background-light rounded-xl border-l-8 border-deep-blue">
+                <h4 class="font-bold text-deep-blue mb-2">Bricolage: Вера как конструктор</h4>
+                <p class="text-deep-blue/70 leading-relaxed">
+                    Современный верующий не принимает «пакетные» решения догматических институтов. Он выступает в роли потребителя на «духовном рынке», выбирая те элементы, которые резонируют с его текущим психологическим состоянием.
+                </p>
+            </div>
+        </div>
+        <div class="bg-primary text-white p-8 rounded-2xl flex flex-col justify-between">
+            <div>
+                <span class="material-symbols-outlined text-4xl mb-6">warning</span>
+                <h3 class="font-serif text-2xl mb-4 italic">Культурная апроприация</h3>
+                <p class="text-white/80 text-sm leading-relaxed mb-6">
+                    Опасность «духовного супермаркета» заключается в деконтекстуализации священных практик. Когда ритуалы превращаются в товар, они теряют свою глубину и превращаются в форму эстетического потребления.
+                </p>
+            </div>
+            <div class="pt-6 border-t border-white/20">
+                <a class="text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all" href="#">
+                    Читать подробнее <span class="material-symbols-outlined">arrow_right_alt</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════ БЛОК 2: От фрагментации к новому синтезу ════
+     Новая секция ЗДЕСЬ — после Spiritual Supermarket, перед навигацией.
+     Логика: это финал всего курса из 5 глав. Каждая предыдущая глава
+     заканчивалась секцией «Решения» — финал обязан сделать то же самое,
+     но с повышенным весом: не просто советы, а синтез всего курса.
+     Нарративная дуга: крах → одиночество → бриколаж → новый синтез. -->
+<section class="py-24 px-6 lg:px-20 bg-white border-t border-deep-blue/10">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Глава 5 · Финальный синтез</span>
+            <h2 class="font-serif text-4xl md:text-5xl text-deep-blue mb-4">От фрагментации к новому синтезу</h2>
+            <p class="text-deep-blue/60 max-w-xl mx-auto">
+                Как обществу преодолеть эпидемию одиночества и вернуть глубину духовным поискам?
+            </p>
+        </div>
+
+        <!-- Три карточки -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+
+            <!-- Карточка 1: Постсекулярные общины -->
+            <div class="solution-card relative bg-background-light border border-deep-blue/10 rounded-2xl p-8 shadow-sm overflow-hidden">
+                <span class="sol-num">01</span>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-xl bg-deep-blue flex items-center justify-center text-white mb-6">
+                        <span class="material-symbols-outlined">groups</span>
+                    </div>
+                    <h4 class="font-serif text-xl text-deep-blue font-bold mb-4">Постсекулярные общины</h4>
+                    <p class="text-sm text-deep-blue/70 leading-relaxed">
+                        Ответом на институциональный кризис становится появление «гибридных» сообществ. Они отказываются от жёстких иерархий в пользу горизонтальных связей, предлагая поколению Z то, что они ищут: аутентичность и инклюзивность.
+                    </p>
+                    <p class="text-sm text-deep-blue/50 leading-relaxed mt-3">
+                        Такие общины успешно объединяют практики осознанного поиска (mindfulness) с активной социальной работой и волонтёрством, возвращая людям чувство плеча.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-deep-blue/10 flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-sm">hub</span>
+                        Новые форматы
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 2: Этическая реконтекстуализация (инвертирована) -->
+            <div class="solution-card relative bg-deep-blue rounded-2xl p-8 shadow-lg overflow-hidden">
+                <span class="sol-num sol-num-light">02</span>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-white mb-6">
+                        <span class="material-symbols-outlined">auto_stories</span>
+                    </div>
+                    <h4 class="font-serif text-xl text-white font-bold mb-4 italic">Этическая реконтекстуализация</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Чтобы избежать поверхностной культурной апроприации в «духовном супермаркете», необходим возврат к этическому фундаменту. Практики — такие как йога или медитация — не должны потребляться исключительно как инструменты селф-хелпа.
+                    </p>
+                    <p class="text-sm text-slate-400 leading-relaxed mt-3">
+                        Образовательные инициативы помогают искателям изучать исторические, философские и моральные корни этих традиций, возвращая им священную глубину.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-sm">school</span>
+                        Образовательная модель
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 3: Восстановление доверия -->
+            <div class="solution-card relative bg-background-light border border-deep-blue/10 rounded-2xl p-8 shadow-sm overflow-hidden">
+                <span class="sol-num">03</span>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-xl bg-deep-blue flex items-center justify-center text-white mb-6">
+                        <span class="material-symbols-outlined">handshake</span>
+                    </div>
+                    <h4 class="font-serif text-xl text-deep-blue font-bold mb-4">Восстановление доверия</h4>
+                    <p class="text-sm text-deep-blue/70 leading-relaxed">
+                        Традиционным религиозным институтам необходимо адаптироваться к условиям цифрового атомизма. Возврат доверия возможен только через радикальную прозрачность, признание прошлых институциональных ошибок и отказ от политизации веры.
+                    </p>
+                    <p class="text-sm text-deep-blue/50 leading-relaxed mt-3">
+                        Институты должны стать не диктаторами морали, а фасилитаторами — проводниками, помогающими человеку собрать свою идентичность в безопасном и поддерживающем пространстве.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-deep-blue/10 flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-sm">verified</span>
+                        Институциональная реформа
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Финальный тезис всего курса -->
+        <div class="bg-deep-blue rounded-2xl p-10 lg:p-14 flex flex-col lg:flex-row items-start lg:items-center gap-8 relative overflow-hidden">
+            <!-- Декоративный пиксельный фон -->
+            <div class="absolute inset-0 opacity-5 pixel-dissolve pointer-events-none"></div>
+            <div class="relative z-10 flex-shrink-0">
+                <div class="w-16 h-16 rounded-full bg-primary/20 border-2 border-primary/40 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary text-3xl">auto_awesome</span>
+                </div>
+            </div>
+            <div class="relative z-10">
+                <p class="text-xs font-bold text-primary uppercase tracking-[0.3em] mb-3">Финальный вывод курса</p>
+                <p class="font-serif text-xl text-white leading-relaxed italic mb-3">
+                    "Духовность не умирает — она децентрализуется. Задача институтов, педагогов и самих искателей состоит в том, чтобы не дать этой децентрализации превратиться в атомизацию, а превратить её в новую форму коллективного смысла."
+                </p>
+                <p class="text-xs text-white/30 uppercase tracking-widest font-bold">Синтез · Цикл «Современный секуляризм»</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ── конец БЛОК 2 ── -->
+
+<!-- Footer Navigation -->
+<section class="bg-deep-blue text-white py-20 px-6 lg:px-20">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+            <div class="max-w-xs">
+                <h2 class="text-2xl font-serif mb-4">Навигация по главам</h2>
+                <p class="text-slate-400 text-sm">Продолжите изучение курса по социологии религии.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full md:w-auto">
+                <a class="group flex items-center justify-between p-6 rounded-xl border border-white/10 hover:border-primary/50 hover:bg-white/5 transition-all" href="chapter4.html">
+                    <div>
+                        <span class="text-primary text-[10px] font-bold uppercase mb-1 block">Предыдущая</span>
+                        <h4 class="font-serif text-lg text-white">Глава 4: Религиозное разнообразие</h4>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-500 group-hover:text-primary transition-colors rotate-180">arrow_forward</span>
+                </a>
+                <a class="group flex items-center justify-between p-6 rounded-xl border border-white/10 hover:border-primary/50 hover:bg-white/5 transition-all" href="index.html">
+                    <div>
+                        <span class="text-primary text-[10px] font-bold uppercase mb-1 block">На главную</span>
+                        <h4 class="font-serif text-lg text-white">Оглавление курса</h4>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-500 group-hover:text-primary transition-colors">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-4 text-slate-400 text-xs">
+                <span>© 2024 Академический проект «Секуляризм»</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer class="bg-background-light py-12 px-6 border-t border-deep-blue/5">
+    <div class="max-w-3xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-bold text-deep-blue/30 uppercase tracking-widest">
+            <span>© 2024 Академический проект «Секуляризм»</span>
+            <div class="flex gap-8">
+                <a class="hover:text-primary transition-colors" href="#">Методология</a>
+                <a class="hover:text-primary transition-colors" href="#">Контакты</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="shared.js"></script>
+</body></html>

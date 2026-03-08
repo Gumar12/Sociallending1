@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#ec5b13",
+                    "background-light": "#f8f6f6",
+                    "background-dark": "#221610",
+                    "deep-blue": "#1a2a44",
+                },
+                fontFamily: { "display": ["Public Sans", "sans-serif"] },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+        },
+    }
+</script>
+<style>
+    .hover-card:hover .hover-content { opacity: 1; transform: translateY(0); }
+    .hover-content { opacity: 0; transform: translateY(10px); transition: all 0.3s ease-in-out; }
+    .scholarly-border { border-left: 4px solid #ec5b13; }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+
+<!-- Navigation -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 px-6 py-4 lg:px-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="flex items-center gap-8">
+        <div class="flex items-center gap-3 text-deep-blue dark:text-slate-100">
+            <span class="material-symbols-outlined text-primary text-3xl">menu_book</span>
+            <h2 class="text-xl font-extrabold tracking-tight">Sociological Insight</h2>
+        </div>
+    </div>
+</header>
+
+<main class="flex-1 max-w-7xl mx-auto w-full px-6 py-12 lg:px-20">
+
+    <!-- Hero Section -->
+    <div class="mb-16">
+        <div class="flex flex-col gap-4 max-w-3xl">
+            <span class="text-primary font-bold tracking-widest uppercase text-xs">Series: Modern Secularism</span>
+            <h1 class="text-deep-blue dark:text-slate-100 text-5xl lg:text-6xl font-black leading-tight tracking-tight">Феномен религии: культурная и социологическая перспектива</h1>
+            <p class="text-slate-600 dark:text-slate-400 text-xl leading-relaxed italic border-l-4 border-primary pl-6 mt-2">Анализ трансформации религиозных институтов в эпоху глобализации и секуляризации</p>
+        </div>
+    </div>
+
+    <!-- Interactive Hub Grid -->
+    <div class="mb-12">
+        <div class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl font-bold text-deep-blue dark:text-slate-100">Table of Contents Hub</h2>
+            <div class="h-px flex-1 bg-slate-200 dark:bg-slate-800 mx-6"></div>
+            <span class="text-slate-400 text-sm font-medium">5 Chapters</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+
+            <!-- Card 1: Культурная идентичность -->
+            <div class="group relative flex flex-col h-80 rounded-xl bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-800 hover-card cursor-pointer">
+                <div class="h-40 w-full overflow-hidden">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXOMqAgnAytC9NBr_8XOanqLRckcrOgJ9N1WWMbn3qruwFrdzPPAVas_3OOaEprid5aM7Tn0YOYsRbfmUCj2U44-UDYx21yPULZkwzBQSY3gnU3P_HeY0KdNqDa8ULbpsmkHFn2JpFTBqVlcMZYD4Gej6VssWBOciKsHaj3fVV_tnjgie0q6fSGLcB4uavk1pQw07qW83Wiew__jAA4xuh9RPU8KStyrE0SJ0Lnj96_hnzfu5T0o3t3jEZlLRLSm3TMYLYlpAgrGkA');"></div>
+                </div>
+                <div class="p-5 flex flex-col justify-between grow">
+                    <div>
+                        <span class="text-primary font-bold text-xs">01</span>
+                        <h3 class="text-deep-blue dark:text-slate-100 font-bold text-lg leading-tight mt-1">Культурная идентичность</h3>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm hover-content">
+                        Габитус, ценности и конструирование «Мы» в эпоху глобализации и миграции.
+                    </p>
+                </div>
+                <div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span class="material-symbols-outlined text-primary bg-white rounded-full p-1 shadow-sm">arrow_forward_ios</span>
+                </div>
+            </div>
+
+            <!-- Card 2: Социальные функции -->
+            <div class="group relative flex flex-col h-80 rounded-xl bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-800 hover-card cursor-pointer">
+                <div class="h-40 w-full overflow-hidden">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBzIS9HvuqMvsIdHs5h0MTQab5DRXD2vX7l8e3dqo-tGKDN2MPkMCW-GIEHPiIKVr7dOsHILhmwtky6OOPPHsPtAhcOIRaCqF-oZbLMZhXRAwRXR9JLKGkXSlwNRdLiu-69OzrU9YI6MLuGGB7-d2I_hyFbdqE5mL4t1WLnrKv9qa6HHgw7672hT2WEHHxuXp2cMOJuIDvnjXDlh7ZrJAbpGATdQjiV0ai17hbzCSofdRp2QvYBlWIZAEaVO3oLiRX0E2yF00yd_yzy');"></div>
+                </div>
+                <div class="p-5 flex flex-col justify-between grow">
+                    <div>
+                        <span class="text-primary font-bold text-xs">02</span>
+                        <h3 class="text-deep-blue dark:text-slate-100 font-bold text-lg leading-tight mt-1">Социальные функции</h3>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm hover-content">
+                        Социальный капитал, инфраструктура заботы и темная сторона закрытых общин.
+                    </p>
+                </div>
+                <div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span class="material-symbols-outlined text-primary bg-white rounded-full p-1 shadow-sm">arrow_forward_ios</span>
+                </div>
+            </div>
+
+            <!-- Card 3: Светские институты -->
+            <div class="group relative flex flex-col h-80 rounded-xl bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-800 hover-card cursor-pointer">
+                <div class="h-40 w-full overflow-hidden">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA08OE2cEHPfwzXbjtaQxnw2n49JUSZCjQpbGRxKcixzD2lRK3OV8qCFiO59WlGA7ytpYbz_G9xWmJA6LFneRlSv0zeNpVZObAzqNGPPltl0ss-LVJYWNTAUQ2MzK_eVl1RStsX1w-YIF_-qk8PexgF1RrXkMC8h_bnpEX_ag8uQ5ssUVYz6HjP0Pa7JETso4ngHNrh1Z56BMqXE_CHadGxHqF-kFRYXIpIEJaczTtd27_9-cmD_huUS8y0kFl6PLtnjpKOe4csET1K');"></div>
+                </div>
+                <div class="p-5 flex flex-col justify-between grow">
+                    <div>
+                        <span class="text-primary font-bold text-xs">03</span>
+                        <h3 class="text-deep-blue dark:text-slate-100 font-bold text-lg leading-tight mt-1">Светские институты</h3>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm hover-content">
+                        Деприватизация религии, правовые коллизии и модели взаимодействия с государством.
+                    </p>
+                </div>
+                <div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span class="material-symbols-outlined text-primary bg-white rounded-full p-1 shadow-sm">arrow_forward_ios</span>
+                </div>
+            </div>
+
+            <!-- Card 4: Религиозное разнообразие -->
+            <div class="group relative flex flex-col h-80 rounded-xl bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-800 hover-card cursor-pointer">
+                <div class="h-40 w-full overflow-hidden">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7ElVZobJNOPWaRgKlVmB0sEDpfkiD-5HJ9hWAE4acmTG7C1iMB85zrs5d1d1sttqtzmDUNRTbyNOmLf_97r6ovCq2OaliDXiOXxtWKe52kfErMmHuzAQVghrnh6w1CoIVxhyKA3G2WZJsVcw9Q7X6eyTrN6su-Prb3_pZv2FyJE4jLUlwA66A63AF4IgVBBZhlxzS2cPOIlezAYW3TxHBvmPPjBwMpp1d87V7xJZH7_--tRTwMBqc-0Osa5GXiZlcGi1Pla-Vbqvj');"></div>
+                </div>
+                <div class="p-5 flex flex-col justify-between grow">
+                    <div>
+                        <span class="text-primary font-bold text-xs">04</span>
+                        <h3 class="text-deep-blue dark:text-slate-100 font-bold text-lg leading-tight mt-1">Религиозное разнообразие</h3>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm hover-content">
+                        Эпоха соседства, межконфессиональный диалог и угроза радикализма.
+                    </p>
+                </div>
+                <div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span class="material-symbols-outlined text-primary bg-white rounded-full p-1 shadow-sm">arrow_forward_ios</span>
+                </div>
+            </div>
+
+            <!-- Card 5: Секуляризация -->
+            <div class="group relative flex flex-col h-80 rounded-xl bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 dark:border-slate-800 hover-card cursor-pointer">
+                <div class="h-40 w-full overflow-hidden">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDGASHwtmSXbollvyvu0gzgm5PvMLF5SSIwoFOjvkBoinxSD8mUiXHgp91y-9KGF8vKNbWoEe8wb_Tf9nzzBOlSBIvdrgUHeMh-TOGuNFqKvfGeO7TqCx8pRhx4wm_CmW4ImZz2ci0jEyhc1SOU0AlEcIA5NY5yLNidIo1rR08eTr7YjzYKowBCfAcfNxO9Btoh1VXXqHgl3-f6nAlx0gcLxLHa9TaX8AjxouqKg7R9IctZoa74Wnr0wDsYRdoD1xEevkWsgJTIl0Q2');"></div>
+                </div>
+                <div class="p-5 flex flex-col justify-between grow">
+                    <div>
+                        <span class="text-primary font-bold text-xs">05</span>
+                        <h3 class="text-deep-blue dark:text-slate-100 font-bold text-lg leading-tight mt-1">Секуляризация</h3>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm hover-content">
+                        Трансформация веры, «духовный супермаркет» и индивидуализм поколения Z.
+                    </p>
+                </div>
+                <div class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span class="material-symbols-outlined text-primary bg-white rounded-full p-1 shadow-sm">arrow_forward_ios</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Featured Analysis -->
+    <div class="mt-20">
+        <h2 class="text-2xl font-bold text-deep-blue dark:text-slate-100 mb-6">Editor's Selection</h2>
+        <div class="flex flex-col lg:flex-row items-stretch gap-8 bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 p-6 lg:p-8 shadow-sm">
+            <div class="flex-1 flex flex-col justify-center gap-6">
+                <div class="flex flex-col gap-2">
+                    <span class="text-primary text-xs font-bold uppercase tracking-widest">ОБЩИЙ ОБЗОР</span>
+                    <h3 class="text-3xl font-bold text-deep-blue dark:text-slate-100 leading-tight">Введение: Религия в XXI веке</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Более 75,8% населения планеты идентифицируют себя с определенной религией. В эпоху стремительных технологических перемен и глубоких социальных сдвигов вера остается краеугольным камнем человеческой идентичности.</p>
+                </div>
+            </div>
+            <div class="lg:w-1/3 aspect-video lg:aspect-square bg-cover bg-center rounded-xl" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCOKitysfwBAaxTVGwa-LcSf7CfyoSaQol_aaFD-IFbInZQQeYHyQk6klzs-uNPKf8NETvtS08634redT1tKkMLTMtTiq8_YXJS7gkC2RiMPrALJtSTU3LG5uMzqLCLyB54QcK4JYk4A5ovmlT1SYKSdsCiSf5xw0h7XjqdWiR434Gj2I_uaBM2iL1UAoHK00lqIwDgYH5RIA8ZOObIHV2YvfOJOfzvVJOWNxoozX6ecoadze59vyc-WOkjU7ztX_LSFhQoiLOJ8VqB');"></div>
+        </div>
+    </div>
+
+</main>
+
+<!-- Footer -->
+<footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 py-12 px-6 lg:px-20">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+        <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-3 text-deep-blue dark:text-slate-100">
+                <span class="material-symbols-outlined text-primary">menu_book</span>
+                <h2 class="text-lg font-bold">Sociological Insight</h2>
+            </div>
+            <p class="text-slate-500 text-sm max-w-xs">A platform dedicated to rigorous academic inquiry and societal observation.</p>
+        </div>
+        <div class="flex flex-wrap gap-8 text-sm font-medium text-slate-600 dark:text-slate-400">
+            <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+            <a class="hover:text-primary transition-colors" href="#">Terms of Inquiry</a>
+            <a class="hover:text-primary transition-colors" href="#">Institutional Access</a>
+            <a class="hover:text-primary transition-colors" href="#">Contact</a>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-slate-100 dark:border-slate-800 text-center text-xs text-slate-400">
+        © 2024 Sociological Insight Publication. All rights reserved.
+    </div>
+</footer>
+
+</div>
+</div>
+
+<script src="shared.js"></script>
+</body></html>

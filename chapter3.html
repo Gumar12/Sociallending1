@@ -1,0 +1,485 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Chapter 3: Religion and the State</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#C06C50",
+                    "deep-blue": "#1A2B3C",
+                    "ivory": "#F9F7F1",
+                    "background-light": "#f8f6f6",
+                    "background-dark": "#221610",
+                },
+                fontFamily: {
+                    "display": ["Playfair Display", "serif"],
+                    "serif": ["Playfair Display", "serif"],
+                    "body": ["Inter", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+        },
+    }
+</script>
+<style>
+    .diagonal-split { clip-path: polygon(0 0, 100% 0, 0 100%); }
+    .diagonal-split-reverse { clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .serif-font { font-family: 'Playfair Display', serif; }
+
+    /* ── Блок 2: модели стран ── */
+    .country-card {
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        cursor: default;
+    }
+    .country-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 32px rgba(26,43,60,0.10);
+    }
+    .country-flag {
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    /* ── Блок 3: карточки решений ── */
+    .solution-card {
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .solution-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(26,43,60,0.12);
+    }
+    .sol-num {
+        font-family: 'Playfair Display', serif;
+        font-size: 5rem;
+        line-height: 1;
+        font-weight: 700;
+        color: rgba(26,43,60,0.05);
+        position: absolute;
+        top: 8px; right: 16px;
+        user-select: none;
+        pointer-events: none;
+    }
+    .sol-num-light {
+        color: rgba(255,255,255,0.05);
+    }
+</style>
+</head>
+<body class="bg-ivory text-slate-900 font-body transition-colors duration-300">
+
+<!-- Top Navigation & Progress -->
+<nav class="sticky top-0 z-50 bg-ivory/90 backdrop-blur-md border-b border-deep-blue/10">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2 text-deep-blue">
+                <span class="material-symbols-outlined text-primary">balance</span>
+                <h2 class="font-display font-bold text-lg tracking-tight">ТЕМА 3: Взаимодействие религии и светских институтов</h2>
+            </div>
+        </div>
+    </div>
+    <div class="w-full h-1 bg-slate-200">
+        <div class="h-full bg-primary w-1/3 transition-all duration-500 rounded-r-full"></div>
+    </div>
+</nav>
+
+<!-- Hero Section: Split-Screen -->
+<header class="relative min-h-[90vh] flex flex-col md:flex-row overflow-hidden">
+    <div class="w-full md:w-1/2 h-full absolute md:relative z-0 opacity-40 md:opacity-100">
+        <div class="absolute inset-0 bg-deep-blue/10 diagonal-split z-10"></div>
+        <div class="h-full w-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-O7nJy1wiYnFfNFNyX8KUvoGbe1YAQRWTeX7C5NaHgrTiRdlfyp91Q0mYtUzJNtrq2008blv-1dzr2eooWsOLTYsiuuweeLBgShFINwiLGU_HYLoelsQQ28ZN7QGt5ZaGY690LBl7w4nUefbg_EYBvU5RoKPyQ9PDoXavLb_X5nmNLFH7OW4ShgnTgJ2W3ZvSyI8gtLJLciY7vr8kUJ9A2MPyHCN2kqqZLX2-rPziKQOAkigOTGevg6rDj13iMTp3Aw8ZuAUtsGin')"></div>
+    </div>
+    <div class="w-full md:w-1/2 h-full absolute md:relative z-0 opacity-20 md:opacity-100 right-0">
+        <div class="absolute inset-0 bg-[#C06C50]/10 diagonal-split-reverse z-10"></div>
+        <div class="h-full w-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBg1KAfy5AmjiOT5KuSQGtB8juwC2hu3U9akQUBmjeAVob59khfNcjg8czphBID6y3m-weWQRvpjlSXOdPR6Wf4VM2s8_vAceYq1tYk4-2yLOrgNkz7N1odKIBSru0jPUkhJ_p6NCqH6DDDT73xd7H45dYYDtBOZFFd0nAsKt4swK6nCkw6KLaPD1LcmcY05mLtgyxRa-IfWbX82zf2A_e15OS4VYzoUSXg3rKTg4mcKCj9pTVbhK6plv7yTrJTnwxAK3aSnv_j15iA')"></div>
+    </div>
+    <div class="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
+        <div class="max-w-4xl text-center px-6 pointer-events-auto bg-ivory/80 md:bg-transparent p-8 md:p-0 rounded-xl">
+            <span class="text-primary font-bold uppercase tracking-widest text-sm">Unit II: Institutional Dynamics</span>
+            <h1 class="text-5xl md:text-7xl font-bold text-deep-blue mt-4 mb-6 leading-tight">ТЕМА 3: Взаимодействие религии и светских институтов (государства)</h1>
+            <p class="text-xl text-slate-700 max-w-2xl mx-auto mb-10 font-body">Постсекулярное общество и «Деприватизация» (Анализ явления)</p>
+        </div>
+    </div>
+</header>
+
+<!-- Section 1: Post-Secular Society -->
+<section class="py-24 bg-primary text-white">
+    <div class="max-w-5xl mx-auto px-6">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-8">
+                <span class="material-symbols-outlined text-6xl opacity-30 mb-4">format_quote</span>
+                <h2 class="text-4xl md:text-5xl italic font-serif leading-snug">"«Деприватизация» религии — отличительная черта постсекулярной эпохи, когда вера вновь выходит на общественную арену, бросая вызов нейтралитету государства."</h2>
+                <p class="mt-6 text-xl font-medium opacity-90">— Юрген Хабермас, <span class="italic text-ivory">Примечания к постсекулярному обществу (2008)</span></p>
+            </div>
+            <div class="md:col-span-4 border-l border-white/20 pl-8">
+                <h4 class="font-display font-bold text-lg mb-4 text-ivory">Ключевая концепция</h4>
+                <p class="text-sm leading-relaxed opacity-80"><strong class="text-ivory">Деприватизация:</strong> Процесс, при котором религиозные традиции отказываются принимать маргинальную, частную роль, отведенную им современным секуляризмом, и вновь заявляют о своем присутствии в политической и социальной сферах.</p>
+                <div class="mt-6 bg-white/10 p-4 rounded-lg">
+                    <span class="text-xs uppercase font-bold tracking-tighter opacity-60">Глоссарий</span>
+                    <p class="text-ivory font-semibold mt-1 cursor-help underline decoration-dotted decoration-primary">Теория секуляризации</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════ БЛОК 2: Институциональные модели ════
+     Вставлен ЗДЕСЬ — между цитатой Хабермаса и судебными кейсами.
+     Логика: цитата задаёт вопрос "как государства реагируют на
+     деприватизацию?" — сравнение четырёх моделей даёт ответ,
+     создавая необходимый контекст перед правовыми коллизиями. -->
+<section class="py-20 bg-ivory border-b border-deep-blue/10">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-14">
+            <span class="text-primary font-bold uppercase tracking-widest text-xs">Слайд 3.1: Сравнительный анализ</span>
+            <h2 class="text-3xl md:text-4xl font-serif text-deep-blue mt-3 mb-4">Институциональные модели: от лаицизма до симфонии</h2>
+            <p class="text-slate-500 max-w-2xl mx-auto text-sm leading-relaxed">
+                Единой универсальной модели секуляризма не существует. На практике принцип отделения церкви от государства реализуется кардинально по-разному.
+            </p>
+        </div>
+
+        <!-- Четыре страны-карточки -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+
+            <!-- Франция -->
+            <div class="country-card bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                <div class="country-flag mb-4">🇫🇷</div>
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="px-2 py-0.5 bg-deep-blue/10 text-deep-blue text-[10px] font-bold uppercase rounded tracking-wider">Строгий лаицизм</span>
+                </div>
+                <h3 class="font-serif text-xl text-deep-blue font-bold mb-3">Франция</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Принцип <em>laïcité</em> предполагает строгое вытеснение религии из публичной сферы, включая запрет на религиозные символы в государственных школах и на госслужбе.
+                </p>
+                <div class="mt-4 pt-4 border-t border-slate-100 flex items-center gap-1.5 text-xs font-bold text-primary uppercase tracking-wider">
+                    <span class="material-symbols-outlined text-sm">visibility_off</span>
+                    Полное разделение
+                </div>
+            </div>
+
+            <!-- Великобритания -->
+            <div class="country-card bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                <div class="country-flag mb-4">🇬🇧</div>
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded tracking-wider">Государственная церковь</span>
+                </div>
+                <h3 class="font-serif text-xl text-deep-blue font-bold mb-3">Великобритания</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Официальная Англиканская церковь, лидеры которой заседают в Палате лордов. Монарх одновременно является светским и духовным главой.
+                </p>
+                <div class="mt-4 pt-4 border-t border-slate-100 flex items-center gap-1.5 text-xs font-bold text-primary uppercase tracking-wider">
+                    <span class="material-symbols-outlined text-sm">account_balance</span>
+                    Официальный союз
+                </div>
+            </div>
+
+            <!-- Германия -->
+            <div class="country-card bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                <div class="country-flag mb-4">🇩🇪</div>
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="px-2 py-0.5 bg-deep-blue/10 text-deep-blue text-[10px] font-bold uppercase rounded tracking-wider">Прагматизм</span>
+                </div>
+                <h3 class="font-serif text-xl text-deep-blue font-bold mb-3">Германия</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Прагматичная система «церковного налога» (<em>Kirchensteuer</em>): государство собирает налог в пользу церквей, обеспечивая их финансирование без политического слияния.
+                </p>
+                <div class="mt-4 pt-4 border-t border-slate-100 flex items-center gap-1.5 text-xs font-bold text-primary uppercase tracking-wider">
+                    <span class="material-symbols-outlined text-sm">payments</span>
+                    Функциональный союз
+                </div>
+            </div>
+
+            <!-- Россия -->
+            <div class="country-card bg-deep-blue rounded-2xl p-6 shadow-sm">
+                <div class="country-flag mb-4">🇷🇺</div>
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="px-2 py-0.5 bg-primary/30 text-primary text-[10px] font-bold uppercase rounded tracking-wider">Особый статус</span>
+                </div>
+                <h3 class="font-serif text-xl text-white font-bold mb-3">Россия</h3>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                    Православная церковь пользуется особым историческим статусом и тесными связями с государством. Деприватизация реализуется через официальную поддержку «традиционных ценностей».
+                </p>
+                <div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-1.5 text-xs font-bold text-primary uppercase tracking-wider">
+                    <span class="material-symbols-outlined text-sm">church</span>
+                    Симфония власти
+                </div>
+            </div>
+        </div>
+
+        <!-- Итоговый тезис -->
+        <div class="bg-slate-100 border border-slate-200 rounded-2xl p-8 flex flex-col lg:flex-row items-start lg:items-center gap-6">
+            <span class="material-symbols-outlined text-primary text-4xl flex-shrink-0">compare</span>
+            <p class="text-slate-700 text-base leading-relaxed">
+                <strong class="text-deep-blue">Вывод:</strong> Эти четыре модели доказывают, что «секулярное государство» — не единый тип, а спектр решений, каждое из которых отражает уникальную историческую и культурную траекторию страны. Правовые конфликты, рассмотренные ниже, возникают именно на пересечении этих различных моделей с требованиями плюралистического общества.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- ── конец БЛОК 2 ── -->
+
+<!-- Section 2: Legal Collisions -->
+<section class="py-24 bg-ivory border-y border-deep-blue/10">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col items-center mb-16 text-center">
+            <span class="material-symbols-outlined text-deep-blue text-5xl mb-4">gavel</span>
+            <h2 class="text-4xl font-serif text-deep-blue">Слайд 3.2: Правовые коллизии: Право на свободу vs. Общий закон (Доказательная база)</h2>
+            <div class="w-24 h-1 bg-primary mt-4"></div>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-12 relative">
+            <div class="hidden lg:block absolute left-1/3 top-0 bottom-0 w-px bg-deep-blue/10"></div>
+            <div class="hidden lg:block absolute left-2/3 top-0 bottom-0 w-px bg-deep-blue/10"></div>
+
+            <!-- Case 1 -->
+            <div class="space-y-6">
+                <div class="flex items-center gap-3">
+                    <span class="px-2 py-1 bg-deep-blue text-white text-[10px] font-bold uppercase rounded">DOCKET NO. 13-354</span>
+                    <span class="text-primary font-bold text-sm">ЗДРАВООХРАНЕНИЕ</span>
+                </div>
+                <h3 class="text-2xl font-serif text-deep-blue font-bold">Burwell v. Hobby Lobby (2014)</h3>
+                <p class="text-slate-600 leading-relaxed font-body italic">«Может ли коммерческая корпорация претендовать на религиозное освобождение от федерального мандата?»</p>
+                <div class="bg-white p-6 border border-slate-200 shadow-sm rounded-lg border-t-4 border-t-primary">
+                    <h4 class="font-bold text-sm text-deep-blue mb-2 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">description</span> CASE STUDY
+                    </h4>
+                    <p class="text-sm text-slate-700">Столкновение в здравоохранении: Отказ религиозных больниц и корпораций спонсировать контрацепцию или проводить аборты.</p>
+                </div>
+            </div>
+
+            <!-- Case 2 -->
+            <div class="space-y-6 lg:px-6">
+                <div class="flex items-center gap-3">
+                    <span class="px-2 py-1 bg-deep-blue text-white text-[10px] font-bold uppercase rounded">EDUCATION</span>
+                    <span class="text-primary font-bold text-sm">ОБРАЗОВАНИЕ</span>
+                </div>
+                <h3 class="text-2xl font-serif text-deep-blue font-bold">Kitzmiller v. Dover (2005)</h3>
+                <p class="text-slate-600 leading-relaxed font-body italic">«Разумный замысел против эволюционной биологии в государственных школах».</p>
+                <p class="text-sm text-slate-700">Споры о преподавании теории эволюции, креационизма и секс-просвета в светских государственных школах.</p>
+                <ul class="space-y-3 mt-4">
+                    <li class="flex items-start gap-2 text-xs font-medium text-slate-600">
+                        <span class="material-symbols-outlined text-primary text-lg">school</span> Establishment Clause Violation
+                    </li>
+                    <li class="flex items-start gap-2 text-xs font-medium text-slate-600">
+                        <span class="material-symbols-outlined text-primary text-lg">science</span> Definition of Science
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Case 3 -->
+            <div class="space-y-6">
+                <div class="flex items-center gap-3">
+                    <span class="px-2 py-1 bg-primary text-white text-[10px] font-bold uppercase rounded">CURRENT TREND</span>
+                    <span class="text-deep-blue font-bold text-sm">ПОЛИТИКА</span>
+                </div>
+                <h3 class="text-2xl font-serif text-deep-blue font-bold">Проект 2025: Вера в правительстве</h3>
+                <p class="text-slate-600 leading-relaxed font-body italic">«План создания "библейского" административного государства».</p>
+                <div class="p-4 bg-slate-100 border-l-4 border-deep-blue rounded">
+                    <p class="text-sm font-body text-slate-800">Навязывание религиозных норм: Попытки политизировать религию — стремление внедрить христианско-националистическую повестку на федеральном уровне.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Authoritarian Regimes — БЛОК 1 (исправление дубликата) -->
+<!-- Логика: первый блок = Китай / подавление. Второй блок заменён на
+     "Инструмент легитимации" — это отдельный механизм, описывающий
+     обратную сторону отношений религии и авторитарной власти. -->
+<section class="py-24 bg-deep-blue text-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-serif mb-8 border-b-2 border-primary pb-4 inline-block">Слайд 3.3: Инструментализация религии авторитарными режимами</h2>
+                <p class="text-lg opacity-80 mb-8 leading-relaxed font-body">В то время как западные демократии спорят о свободе совести, авторитарные режимы часто используют религиозные структуры для легитимации власти или подавляют веру как конкурирующий центр силы.</p>
+                <div class="space-y-8">
+
+                    <!-- Блок 1: Китай — оригинальный -->
+                    <div class="flex gap-6">
+                        <div class="size-12 rounded bg-primary/20 flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-primary">public</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-2">Китай: Китаизация</h4>
+                            <p class="text-sm opacity-70">Ассимиляция меньшинств: Законы о «национальном единстве», используемые для подавления неугодных религиозных групп и приведения их в соответствие с социалистическими ценностями.</p>
+                        </div>
+                    </div>
+
+                    <!-- Блок 2: ИСПРАВЛЕН — Инструмент легитимации -->
+                    <div class="flex gap-6">
+                        <div class="size-12 rounded bg-primary/20 flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-primary">policy</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-2">Инструмент легитимации</h4>
+                            <p class="text-sm opacity-70">Государство использует лояльные религиозные институты как инструмент контроля над населением и оправдания своей власти, одновременно жёстко подавляя любые независимые религиозные группы, которые воспринимаются как угроза режиму и нарушают «единообразную идеологическую основу».</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-10 bg-primary/10 blur-3xl rounded-full"></div>
+                <div class="relative bg-slate-800/50 border border-slate-700 p-8 rounded-2xl backdrop-blur-sm">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="font-display font-bold text-sm uppercase tracking-widest text-primary">Global Heat Map</h3>
+                        <span class="text-[10px] bg-white/10 px-2 py-1 rounded">2024 Index</span>
+                    </div>
+                    <div class="aspect-video w-full bg-slate-900 rounded-xl overflow-hidden mb-6 relative group">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-40 grayscale group-hover:grayscale-0 transition-all duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDM_cd1PInDrBvRIRJtMlzpXKP-Gsg3M4QesTyNpnOk3BRA-v-pwFci5Qgc8fanxXWCSt3hDPVaXJSMT6oIjElyenFGmXNPa53e9Tiq5qsofKVjDVUEO-E4qpKPcUejLr3Eki_iC3_VARrfC0rvWQH_r_ss1bN-v2D9-0J-0Fmyiae7P-g-z8-_N2lwYADKZhWiw8t3A5-Hq8fT_XHafSfA5qcfL4aT7QbV1kvE7lKSuGm1mndtYpf-cXS_iCxbw4Ljjw1cQw8WkDIu');"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-6xl text-primary animate-pulse">map</span>
+                        </div>
+                        <div class="absolute top-1/4 left-1/3 size-3 bg-primary rounded-full animate-ping"></div>
+                        <div class="absolute top-1/3 right-1/4 size-4 bg-primary rounded-full animate-ping shadow-[0_0_15px_rgba(236,91,19,0.8)]"></div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-3 bg-slate-900/50 rounded border border-slate-700">
+                            <p class="text-[10px] uppercase text-slate-400">High Restriction</p>
+                            <p class="text-2xl font-bold">54 Countries</p>
+                        </div>
+                        <div class="p-3 bg-slate-900/50 rounded border border-slate-700">
+                            <p class="text-[10px] uppercase text-slate-400">Civil Unrest Link</p>
+                            <p class="text-2xl font-bold">78%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════ БЛОК 3: Стратегии разрешения конфликтов ════
+     Новая секция перед футером.
+     Логика: кейсы (S2) и авторитаризм (S3) описывают проблемы —
+     эта секция даёт правовые и философские ответы на них.
+     Нарративная дуга: явление → коллизии → инструментализация → решения. -->
+<section class="py-24 bg-white border-t border-deep-blue/10">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <span class="text-primary font-bold uppercase tracking-widest text-xs">Слайд 3.5: Академические решения</span>
+            <h2 class="text-4xl md:text-5xl font-serif text-deep-blue mt-3 mb-4">Стратегии разрешения конфликтов</h2>
+            <p class="text-slate-500 max-w-xl mx-auto text-base">
+                Как сбалансировать религиозную свободу и права граждан в демократическом обществе?
+            </p>
+        </div>
+
+        <!-- Три карточки -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+
+            <!-- Карточка 1: Пропорциональность -->
+            <div class="solution-card relative bg-ivory border border-slate-200 rounded-2xl p-8 overflow-hidden shadow-sm">
+                <span class="sol-num">01</span>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-xl bg-deep-blue flex items-center justify-center text-white mb-6">
+                        <span class="material-symbols-outlined">balance</span>
+                    </div>
+                    <h4 class="font-serif text-xl text-deep-blue font-bold mb-4">Пропорциональность и права человека</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Международное право не устанавливает иерархии прав. В случае конфликта — например, между свободой вероисповедания клиники и правом пациента на репродуктивное здоровье — должен применяться принцип пропорциональности.
+                    </p>
+                    <p class="text-sm text-slate-500 leading-relaxed mt-3">
+                        Это требует точечного поиска компромиссов: религиозные организации получают частичные освобождения, но с обязательным обеспечением альтернативных путей доступа граждан к необходимым услугам.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-slate-200 flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-sm">gavel</span>
+                        Правовой принцип
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 2: Ролз (инвертирована) -->
+            <div class="solution-card relative bg-deep-blue rounded-2xl p-8 overflow-hidden shadow-lg">
+                <span class="sol-num sol-num-light">02</span>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-white mb-6">
+                        <span class="material-symbols-outlined">record_voice_over</span>
+                    </div>
+                    <h4 class="font-serif text-xl text-white font-bold mb-4 italic">«Публичный разум» Джона Ролза</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Для защиты демократии от радикальных проектов (таких как Project 2025) философ Джон Ролз предложил концепцию «публичного разума»: при обсуждении законов граждане и политики должны переводить свои религиозные аргументы на светский язык, доступный всем.
+                    </p>
+                    <p class="text-sm text-slate-400 leading-relaxed mt-3">
+                        Закон должен опираться на соображения общего блага, а не на частные теологические доктрины.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-sm">forum</span>
+                        Философский принцип
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 3: Международное давление -->
+            <div class="solution-card relative bg-ivory border border-slate-200 rounded-2xl p-8 overflow-hidden shadow-sm">
+                <span class="sol-num">03</span>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-xl bg-deep-blue flex items-center justify-center text-white mb-6">
+                        <span class="material-symbols-outlined">public</span>
+                    </div>
+                    <h4 class="font-serif text-xl text-deep-blue font-bold mb-4">Международное давление на автократии</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Для защиты религиозных меньшинств от репрессий требуется усиление международного мониторинга. Механизмы ООН — в частности, Специальный докладчик по вопросам свободы религии — и демократические страны должны использовать дипломатические и экономические рычаги.
+                    </p>
+                    <p class="text-sm text-slate-500 leading-relaxed mt-3">
+                        Защита свободы совести — это не только моральный долг, но и вопрос международной безопасности.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-slate-200 flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-sm">flag</span>
+                        Дипломатический принцип
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Итоговый тезис -->
+        <div class="bg-primary/8 border border-primary/20 rounded-2xl p-10 flex flex-col lg:flex-row items-start lg:items-center gap-8">
+            <span class="material-symbols-outlined text-primary text-5xl flex-shrink-0 opacity-70">lightbulb</span>
+            <div>
+                <p class="font-serif text-xl text-deep-blue leading-relaxed mb-2 italic">
+                    "Демократическое государство не нейтрально — оно активно управляет балансом между свободой совести и равенством прав. Выбор инструментов этого управления и есть суть политики секуляризма."
+                </p>
+                <p class="text-xs text-slate-400 uppercase tracking-widest font-bold mt-2">Вывод · Тема 3</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ── конец БЛОК 3 ── -->
+
+<!-- Footer -->
+<footer class="bg-deep-blue text-white py-20 px-6 lg:px-20">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+            <div class="max-w-xs">
+                <h2 class="text-2xl font-serif mb-4">Навигация по главам</h2>
+                <p class="text-slate-400 text-sm">Продолжите изучение курса по социологии религии.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full md:w-auto">
+                <a class="group flex items-center justify-between p-6 rounded-xl border border-white/10 hover:border-primary/50 hover:bg-white/5 transition-all" href="chapter2.html">
+                    <div>
+                        <span class="text-primary text-[10px] font-bold uppercase mb-1 block">Предыдущая</span>
+                        <h4 class="font-serif text-lg text-white">Глава 2: Социальные функции религии</h4>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-500 group-hover:text-primary transition-colors rotate-180">arrow_forward</span>
+                </a>
+                <a class="group flex items-center justify-between p-6 rounded-xl border border-white/10 hover:border-primary/50 hover:bg-white/5 transition-all" href="chapter4.html">
+                    <div>
+                        <span class="text-primary text-[10px] font-bold uppercase mb-1 block">Следующая</span>
+                        <h4 class="font-serif text-lg text-white">Глава 4: Религиозное разнообразие</h4>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-500 group-hover:text-primary transition-colors">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-4 text-slate-400 text-xs">
+                <span>© 2024 Academic Press</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="shared.js"></script>
+</body></html>

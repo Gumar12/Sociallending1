@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html class="light" lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chapter 1: Роль религии в формировании культурной идентичности</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&family=Merriweather:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+        extend: {
+            colors: {
+                "primary": "#C06C50",
+                "background-light": "#F9F7F1",
+                "background-dark": "#1A2B3C",
+                "deep-blue": "#1A2B3C",
+            },
+            fontFamily: {
+                "display": ["Inter", "sans-serif"],
+                "serif": ["Merriweather", "serif"],
+            },
+        },
+    },
+}</script>
+<style>
+    .progress-container { position: fixed; top: 0; left: 0; width: 100%; z-index: 100; }
+    .dotted-term { text-decoration: underline dotted #C06C50; text-underline-offset: 4px; cursor: help; }
+    .sticky-sidebar { position: sticky; top: 100px; }
+    body { background-color: #F9F7F1; }
+
+    /* Блок 1 */
+    .weber-callout {
+        border-left: 4px solid #C06C50;
+        background: linear-gradient(135deg, #fff8f5 0%, #f9f7f1 100%);
+    }
+    /* Блок 2 */
+    .culture-wars-banner {
+        background: linear-gradient(to right, #1A2B3C, #2d3f52);
+        position: relative; overflow: hidden;
+    }
+    .culture-wars-banner::before {
+        content: ''; position: absolute; inset: 0;
+        background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(192,108,80,0.05) 20px, rgba(192,108,80,0.05) 40px);
+    }
+    /* Блок 3 */
+    .solution-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .solution-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(26,43,60,0.12); }
+    .card-number {
+        font-size: 4rem; font-family: 'Merriweather', serif; line-height: 1;
+        color: #e8ddd9; position: absolute; top: 12px; right: 20px;
+        font-weight: 900; user-select: none;
+    }
+</style>
+</head>
+<body class="font-display text-slate-800 selection:bg-primary/30" style="background-color: #F9F7F1;">
+
+<div class="progress-container h-1 bg-slate-200/50">
+    <div class="h-full bg-[#C06C50]" style="width: 35%;"></div>
+</div>
+
+<header class="border-b border-slate-200 bg-[#F9F7F1] px-6 lg:px-20 py-4 flex items-center justify-between sticky top-0 z-50">
+    <div class="flex items-center gap-6">
+        <div class="flex items-center gap-2 text-deep-blue">
+            <span class="material-symbols-outlined text-primary">menu_book</span>
+            <h2 class="text-sm font-bold uppercase tracking-widest font-display">Cultural Identity Series</h2>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<!-- ════ Section 1: Hero ════ -->
+<section class="min-h-[80vh] flex flex-col items-center justify-center px-6 lg:px-40 py-20 bg-background-light">
+    <div class="max-w-4xl w-full text-center">
+        <nav class="flex justify-center gap-2 mb-8 text-sm font-medium text-primary">
+            <a href="#">Home</a><span>/</span>
+            <span class="text-slate-400">Sociology of Religion</span>
+        </nav>
+        <h1 class="font-serif text-5xl md:text-7xl text-deep-blue leading-tight mb-8">Роль религии в формировании культурной идентичности</h1>
+        <div class="flex items-center justify-center gap-6 text-slate-500 mb-12">
+            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">schedule</span> 8 min read</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-primary/40"></span>
+            <span class="font-bold text-slate-700">Chapter 1</span>
+        </div>
+    </div>
+    <div class="w-full max-w-5xl h-96 bg-slate-100 rounded-xl overflow-hidden relative group">
+        <div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-deep-blue/20"></div>
+        <img class="w-full h-full object-cover mix-blend-overlay opacity-80 group-hover:scale-105 transition-transform duration-700" alt="Abstract threads" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4tkpvzfep2T9cQ7f3oFvjPK8ZHdaKd3VENxum-5fiu4OkvkioWwfQHDVALEpof7WMRa85WSaeBdqb7eBCa7p7zdGIuyki_pPj3K44xXewdIMyi3_da2UclRGScNjGihSGoH2fuOvyv04uNyr1ypg4jHC5RHwSf9zNIMRtgEm-V4tbEBZRtDr9sRsv2CLyK7wnf1eCpQOOQHRb2Eu6eCdkksc8mnRfE0Y-w_CtXHbI0HjEqQ7dqChLgHfUj7Mh6M1x64FrEp41MkYW"/>
+        <div class="absolute bottom-6 right-6 bg-white/90 backdrop-blur-md p-4 rounded-lg shadow-xl max-w-xs border-l-4 border-primary">
+            <p class="text-xs text-deep-blue italic">"Religion serves as a foundational pillar in the construction of collective and individual identity."</p>
+        </div>
+    </div>
+</section>
+
+<!-- ════ Section 2: Bourdieu + БЛОК 1 (Weber) ════ -->
+<section class="max-w-7xl mx-auto px-6 lg:px-20 py-24 grid grid-cols-1 lg:grid-cols-10 gap-16 items-start">
+    <div class="lg:col-span-6 space-y-8">
+        <h2 class="font-serif text-3xl text-deep-blue">Культурный капитал и миграция</h2>
+        <p class="text-lg leading-relaxed text-slate-700">
+            Религия не просто система верований, а мощный генератор смыслов, который структурирует повседневность. Понятие <span class="dotted-term" title="Система устойчивых предрасположенностей человека к определённому поведению">габитуса</span> позволяет нам увидеть, как религиозные практики интериоризируются и становятся частью личности.
+        </p>
+        <p class="text-lg leading-relaxed text-slate-700">
+            В глобальном контексте распределение идентичностей выглядит неоднородно. Культурные границы часто совпадают с конфессиональными, создавая сложные геополитические и социальные ландшафты.
+        </p>
+
+        <!-- ── БЛОК 1: Глобальный ландшафт + Вебер ──
+             Вставлен ЗДЕСЬ: между теорией Бурдьё и инфографикой.
+             Логика: Бурдьё → Вебер = два теоретических столпа,
+             затем конкретные региональные примеры «заземляют»
+             абстракцию перед количественной инфографикой. -->
+        <div class="weber-callout rounded-xl p-8 space-y-5">
+            <div class="flex items-center gap-3 mb-2">
+                <span class="material-symbols-outlined text-primary text-2xl">public</span>
+                <h3 class="font-serif text-xl text-deep-blue">Глобальный ландшафт и экономическая этика</h3>
+            </div>
+            <p class="text-base leading-relaxed text-slate-700">
+                В различных регионах мира роль религии в конструировании идентичности проявляется по-разному. В странах Африки к югу от Сахары христианство стало неотъемлемой частью культурного кода (к 2020 году регион превзошёл Европу по числу христиан). В Индии культурные нормы определяет индуизм, а в исламских странах религиозная идентичность сложно переплетается с национальной и этнической. При этом идентичность не статична: исследования показывают, что среди китайских мигрантов часто наблюдается <span class="dotted-term" title="Смена религиозной принадлежности как стратегия социальной адаптации">"религиозное переключение"</span> как эффективный способ интеграции в принимающее общество.
+            </p>
+            <p class="text-base leading-relaxed text-slate-700">
+                Помимо концепции культурного капитала П. Бурдьё, фундаментальное значение имеет теория <strong class="text-deep-blue">Макса Вебера</strong>. В своей классической работе о протестантской этике он доказал, что религиозные ценности способны не только формировать личную мораль, но и определять экономическое поведение целых обществ, становясь драйвером возникновения новых социально-экономических систем.
+            </p>
+            <div class="flex items-center gap-3 pt-2 border-t border-primary/20">
+                <div class="h-8 w-8 rounded-full bg-deep-blue/10 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-deep-blue text-sm">person</span>
+                </div>
+                <p class="text-xs text-slate-500 italic">Макс Вебер — «Протестантская этика и дух капитализма» (1905)</p>
+            </div>
+        </div>
+        <!-- ── конец БЛОК 1 ── -->
+
+        <!-- Chart (оригинальный) -->
+        <div class="p-8 bg-white rounded-xl shadow-sm border border-slate-100">
+            <h3 class="font-bold text-deep-blue mb-6 flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary">pie_chart</span>
+                Global Religious Demographics (2024 Est.)
+            </h3>
+            <div class="space-y-4">
+                <div class="relative pt-1">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-semibold inline-block text-deep-blue uppercase">Christianity</span>
+                        <span class="text-xs font-semibold inline-block text-primary">47%</span>
+                    </div>
+                    <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-primary/10">
+                        <div class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-primary" style="width:47%"></div>
+                    </div>
+                </div>
+                <div class="relative pt-1">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-semibold inline-block text-deep-blue uppercase">Islam</span>
+                        <span class="text-xs font-semibold inline-block text-deep-blue">29%</span>
+                    </div>
+                    <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-slate-200">
+                        <div class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-deep-blue" style="width:29%"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-xs text-slate-400 mt-4 italic">Source: PEW Research Center analysis of global identity trends.</p>
+        </div>
+    </div>
+
+    <!-- Цитата Бурдьё (оригинальная) -->
+    <aside class="lg:col-span-4 sticky-sidebar">
+        <div class="bg-primary text-white p-10 rounded-xl shadow-2xl transform lg:rotate-2 hover:rotate-0 transition-transform duration-500">
+            <span class="material-symbols-outlined text-5xl opacity-30 mb-4">format_quote</span>
+            <p class="font-serif text-xl leading-relaxed mb-6">
+                "Религиозное поле — это пространство борьбы за монополию на легитимное использование символических благ спасения."
+            </p>
+            <hr class="border-white/20 mb-4"/>
+            <div class="flex items-center gap-4">
+                <div class="h-12 w-12 rounded-full border-2 border-white/50 overflow-hidden">
+                    <img class="w-full h-full object-cover" alt="Pierre Bourdieu" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMrBDX6H6iswoNtNS_pq1ljQSqM0nL6xL83N-2GAbgsPjTIo_De0Lws2Re6bOjTPOXmOAUoMkaH7G2yemZWZSZFgqGY0oJLjhv9AzIyBe-Zl8eBZ_gFO5y3D9Qv_lljfws0gpCKMlSMCklq7PxhkFxTiAJdV-ICkPjmQAWm8QrNRxiZpq7zBh9gnGZGy1hH0Vij153IPeKw9-BzgLU6nfUWhB1zQmGWuS4mko9kq1ZymMy1cmSAYbQHW3kRhp2jpHel7TdJxpa8hc4"/>
+                </div>
+                <div>
+                    <p class="font-bold uppercase tracking-widest text-xs">Пьер Бурдьё</p>
+                    <p class="text-[10px] opacity-80 uppercase">Sociologist &amp; Philosopher</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+</section>
+
+<!-- ════ Section 3: Conflict Zone ════ -->
+<section class="w-full flex flex-col lg:flex-row min-h-screen relative overflow-hidden">
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+        <div class="bg-background-light p-8 rounded-full shadow-2xl border-4 border-primary/20 flex flex-col items-center justify-center w-48 h-48 lg:w-64 lg:h-64 scale-90 lg:scale-100">
+            <span class="text-5xl lg:text-7xl font-serif font-black text-deep-blue">58%</span>
+            <span class="text-[10px] lg:text-xs font-bold text-primary uppercase text-center mt-2 px-4 leading-tight">Pew Research 2025: Identity Gap in Urban Centers</span>
+        </div>
+    </div>
+    <div class="flex-1 bg-deep-blue text-slate-300 p-12 lg:p-24 flex flex-col justify-center">
+        <div class="max-w-md ml-auto">
+            <span class="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Perspective A</span>
+            <h3 class="text-white font-serif text-4xl mb-6">Традиционные Догмы</h3>
+            <p class="text-lg leading-relaxed opacity-80 mb-8">
+                Упор на историческую преемственность, ритуал и сохранение коллективных норм. Религия здесь выступает как «социальный клей», удерживающий общину от атомизации.
+            </p>
+            <ul class="space-y-4">
+                <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary">shield</span><span>Защита традиционных ценностей</span></li>
+                <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary">history_edu</span><span>Трансляция культурного кода</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="flex-1 bg-slate-50 text-slate-700 p-12 lg:p-24 flex flex-col justify-center border-l border-slate-200">
+        <div class="max-w-md">
+            <span class="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Perspective B</span>
+            <h3 class="text-deep-blue font-serif text-4xl mb-6">Прогрессивные Ценности</h3>
+            <p class="text-lg leading-relaxed mb-8">
+                Приоритет индивидуального поиска, рациональности и глобальной гражданской идентичности. Религия переходит в сферу приватного или эстетического.
+            </p>
+            <ul class="space-y-4 text-slate-500">
+                <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary">diversity_3</span><span>Мультикультурализм и инклюзия</span></li>
+                <li class="flex items-start gap-3"><span class="material-symbols-outlined text-primary">science</span><span>Критический рационализм</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ── БЛОК 2: Культурные войны ──
+     Следует СРАЗУ после split-screen.
+     Логика: сначала показываем два полюса (A vs B),
+     затем этот баннер объясняет последствия их столкновения —
+     работает как «синтез» в диалектической структуре. -->
+<div class="culture-wars-banner w-full px-6 lg:px-20 py-16">
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center gap-10">
+            <div class="flex-shrink-0">
+                <div class="w-16 h-16 rounded-full bg-primary/20 border-2 border-primary/40 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary text-3xl">crisis_alert</span>
+                </div>
+            </div>
+            <div class="flex-1 space-y-4">
+                <div class="flex items-center gap-3 mb-1">
+                    <span class="text-primary font-bold text-xs uppercase tracking-[0.3em]">На стыке двух перспектив</span>
+                    <div class="h-px flex-1 bg-primary/20 max-w-[80px]"></div>
+                </div>
+                <h3 class="font-serif text-2xl lg:text-3xl text-white">Культурные войны как точка разлома</h3>
+                <p class="text-slate-300 text-base leading-relaxed max-w-3xl">
+                    По мере плюрализации обществ традиционные религиозные ценности всё чаще вступают в острый конфликт со светской культурой. Сегодня этот разлом особенно заметен в вопросах гендера, сексуальности и репродуктивных прав. Настаивание консервативных институтов на определённых нормах часто приводит к поляризации общества и восприятию религии как инструмента дискриминации.
+                </p>
+                <p class="text-slate-400 text-base leading-relaxed max-w-3xl">
+                    Кроме того, традиционные институты социализации — семья и община — всё чаще терпят неудачу в передаче религиозной идентичности новым поколениям в условиях светского мейнстрима.
+                </p>
+            </div>
+            <div class="flex-shrink-0 text-center p-6 rounded-xl border border-white/10 bg-white/5 min-w-[140px]">
+                <p class="font-serif text-5xl font-black text-primary">↓</p>
+                <p class="text-white text-sm font-bold mt-2">Передача идентичности</p>
+                <p class="text-slate-400 text-xs mt-1">в новых поколениях</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ── конец БЛОК 2 ── -->
+
+<!-- ════ Section 4: Exodus & Gen Z (оригинальная) ════ -->
+<section class="max-w-7xl mx-auto px-6 lg:px-20 py-24">
+    <div class="text-center mb-16">
+        <h2 class="font-serif text-4xl text-deep-blue mb-4">Поколение Z: Великий Исход</h2>
+        <p class="text-slate-500 max-w-2xl mx-auto">Анализ падения уровня религиозности в современных мегаполисах и поиск новых форм аутентичности.</p>
+    </div>
+    <div class="w-full aspect-[21/9] bg-white rounded-2xl shadow-sm border border-slate-100 mb-16 relative overflow-hidden p-8">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, #C06C50 1px, transparent 1px); background-size: 30px 30px;"></div>
+        <div class="relative h-full flex flex-col justify-between">
+            <div class="flex justify-between items-end h-full px-12 pb-10">
+                <svg class="w-full h-full" fill="none" viewBox="0 0 1000 400">
+                    <path d="M0 50 Q 250 80, 500 180 T 1000 350" fill="none" stroke="#C06C50" stroke-width="4"></path>
+                    <circle cx="0" cy="50" fill="#C06C50" r="6"></circle>
+                    <circle cx="500" cy="180" fill="#C06C50" r="6"></circle>
+                    <circle cx="1000" cy="350" fill="#C06C50" r="6"></circle>
+                </svg>
+            </div>
+            <div class="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-widest border-t pt-4">
+                <span>1990: Peak Affiliation</span>
+                <span>2010: Transition</span>
+                <span>2024: Digital Exodus</span>
+            </div>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-8 bg-background-light border border-slate-200 rounded-xl hover:-translate-y-2 transition-transform shadow-md group">
+            <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined">security</span>
+            </div>
+            <h4 class="font-serif text-xl text-deep-blue mb-4">Exclusivism</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">Жёсткое разграничение «свой-чужой», усиление внутренней солидарности за счёт внешней оппозиции.</p>
+        </div>
+        <div class="p-8 bg-background-light border border-slate-200 rounded-xl hover:-translate-y-2 transition-transform shadow-md group">
+            <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined">campaign</span>
+            </div>
+            <h4 class="font-serif text-xl text-deep-blue mb-4">Politicization</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">Использование религиозных символов в политической борьбе и легитимации власти.</p>
+        </div>
+        <div class="p-8 bg-background-light border border-slate-200 rounded-xl hover:-translate-y-2 transition-transform shadow-md group">
+            <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined">fingerprint</span>
+            </div>
+            <h4 class="font-serif text-xl text-deep-blue mb-4">Search for Authenticity</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">Уход от институциональных догм к личному духовному опыту и практикам осознанности.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ════ Section 5: Solutions — БЛОК 3 ════
+     Новая секция ПЕРЕД футером.
+     Логика: завершает нарративную дугу всей главы:
+     теория (S2) → конфликт (S3) → упадок (S4) → решения (S5).
+     Без этого глава заканчивалась бы на пессимизме. -->
+<section class="bg-white border-t border-slate-100 px-6 lg:px-20 py-24">
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Глава 1 · Выводы</span>
+            <h2 class="font-serif text-4xl lg:text-5xl text-deep-blue mb-4">Пути преодоления: от конфликта к диалогу</h2>
+            <p class="text-slate-500 max-w-2xl mx-auto text-base">
+                Стратегии адаптации религиозных институтов к вызовам современного плюралистического общества.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <!-- Карточка 1 -->
+            <div class="solution-card relative p-8 bg-background-light border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+                <span class="card-number">01</span>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-lg bg-deep-blue flex items-center justify-center text-white mb-6">
+                        <span class="material-symbols-outlined">join_inner</span>
+                    </div>
+                    <h4 class="font-serif text-xl text-deep-blue mb-4">Конструирование гибридных идентичностей</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Вместо эссенциалистского подхода (жёсткого разграничения «свой-чужой») обществам необходимо признать множественность идентичностей. Индивиды могут успешно конструировать свою веру через синтез различных культурных элементов.
+                    </p>
+                    <p class="text-sm text-slate-500 leading-relaxed mt-3">
+                        Яркий пример — опыт коренных народов, находящих способы гармонично интегрировать новые религиозные убеждения в рамки своих традиционных духовных практик.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-slate-200 flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-sm">auto_awesome</span>
+                        Инклюзивная модель
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 2 (инвертированная) -->
+            <div class="solution-card relative p-8 bg-deep-blue border border-deep-blue rounded-xl shadow-sm overflow-hidden">
+                <span class="card-number" style="color: rgba(255,255,255,0.07)">02</span>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-lg bg-primary flex items-center justify-center text-white mb-6">
+                        <span class="material-symbols-outlined">forum</span>
+                    </div>
+                    <h4 class="font-serif text-xl text-white mb-4">Создание «светских пространств»</h4>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Для преодоления конфликта ценностей необходима нейтральная зона диалога. В этом светском пространстве религиозные аргументы должны переводиться на язык, доступный всем гражданам.
+                    </p>
+                    <p class="text-sm text-slate-400 leading-relaxed mt-3">
+                        Вместо апелляции к исключительным заповедям, религиозные группы могут обосновывать свои позиции через универсальные ценности: достоинство человека, экологию и социальную справедливость.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-white/10 flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-sm">handshake</span>
+                        Диалоговая модель
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="solution-card relative p-8 bg-background-light border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+                <span class="card-number">03</span>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 rounded-lg bg-deep-blue flex items-center justify-center text-white mb-6">
+                        <span class="material-symbols-outlined">phone_android</span>
+                    </div>
+                    <h4 class="font-serif text-xl text-deep-blue mb-4">Адаптация для Поколения Z</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Для передачи ценностей молодёжи требуется отказ от жёстких догматических рамок в пользу аутентичности. Религиозным сообществам необходимо активнее использовать цифровые технологии для образования.
+                    </p>
+                    <p class="text-sm text-slate-500 leading-relaxed mt-3">
+                        Вовлечение через практико-ориентированные инициативы — волонтёрство и социальное служение — помогает молодым людям увидеть реальную релевантность веры в повседневной жизни.
+                    </p>
+                    <div class="mt-6 pt-4 border-t border-slate-200 flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-sm">trending_up</span>
+                        Цифровая модель
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Итоговый тезис главы -->
+        <div class="bg-gradient-to-r from-primary/8 to-deep-blue/5 border border-primary/20 rounded-2xl p-10 flex flex-col lg:flex-row items-start lg:items-center gap-8">
+            <span class="material-symbols-outlined text-primary text-5xl flex-shrink-0 opacity-60">lightbulb</span>
+            <div>
+                <p class="font-serif text-xl text-deep-blue leading-relaxed mb-2">
+                    "Религиозная идентичность не исчезает — она трансформируется. Задача институтов и исследователей состоит в том, чтобы создать условия для этой трансформации, а не препятствовать ей."
+                </p>
+                <p class="text-xs text-slate-400 uppercase tracking-widest font-bold">Вывод · Глава 1</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ── конец БЛОК 3 / Section 5 ── -->
+
+</main>
+
+<!-- Footer (оригинальный) -->
+<footer class="bg-deep-blue text-white py-20 px-6 lg:px-20 mt-12">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+            <div class="max-w-xs">
+                <h2 class="text-2xl font-serif mb-4">Навигация по главам</h2>
+                <p class="text-slate-400 text-sm">Продолжите изучение курса по социологии религии.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full md:w-auto">
+                <a class="group flex items-center justify-between p-6 rounded-xl border border-white/10 hover:border-primary/50 hover:bg-white/5 transition-all" href="index.html">
+                    <div>
+                        <span class="text-primary text-[10px] font-bold uppercase mb-1 block">Предыдущая</span>
+                        <h4 class="font-serif text-lg text-white">Введение</h4>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-500 group-hover:text-primary transition-colors rotate-180">arrow_forward</span>
+                </a>
+                <a class="group flex items-center justify-between p-6 rounded-xl border border-white/10 hover:border-primary/50 hover:bg-white/5 transition-all" href="chapter2.html">
+                    <div>
+                        <span class="text-primary text-[10px] font-bold uppercase mb-1 block">Следующая</span>
+                        <h4 class="font-serif text-lg text-white">Глава 2: Социальные функции религии</h4>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-500 group-hover:text-primary transition-colors">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-4 text-slate-400 text-xs">
+                <span>© 2024 Cultural Identity Series</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="shared.js"></script>
+</body></html>
