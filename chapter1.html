@@ -62,6 +62,29 @@
         color: #e8ddd9; position: absolute; top: 12px; right: 20px;
         font-weight: 900; user-select: none;
     }
+
+    /* Блок 4: СНГ */
+    .cis-country-card {
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .cis-country-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 32px rgba(26,43,60,0.1);
+    }
+    .cis-country-card .country-flag {
+        width: 48px; height: 48px; border-radius: 12px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.5rem; flex-shrink: 0;
+    }
+    .cis-divider {
+        background: repeating-linear-gradient(
+            90deg,
+            #C06C50 0px, #C06C50 8px,
+            transparent 8px, transparent 16px
+        );
+        height: 2px;
+    }
 </style>
 </head>
 <body class="font-display text-slate-800 selection:bg-primary/30" style="background-color: #F9F7F1;">
@@ -141,11 +164,7 @@
             </div>
         </div>
 
-        <!-- ── БЛОК 1: Глобальный ландшафт + Вебер ──
-             Вставлен ЗДЕСЬ: между теорией Бурдьё и инфографикой.
-             Логика: Бурдьё → Вебер = два теоретических столпа,
-             затем конкретные региональные примеры «заземляют»
-             абстракцию перед количественной инфографикой. -->
+        <!-- ── БЛОК 1: Глобальный ландшафт + Вебер ── -->
         <div class="weber-callout rounded-xl p-8 space-y-5">
             <div class="flex items-center gap-3 mb-2">
                 <span class="material-symbols-outlined text-primary text-2xl">public</span>
@@ -261,11 +280,7 @@
     </div>
 </section>
 
-<!-- ── БЛОК 2: Культурные войны ──
-     Следует СРАЗУ после split-screen.
-     Логика: сначала показываем два полюса (A vs B),
-     затем этот баннер объясняет последствия их столкновения —
-     работает как «синтез» в диалектической структуре. -->
+<!-- ── БЛОК 2: Культурные войны ── -->
 <div class="culture-wars-banner w-full px-6 lg:px-20 py-16">
     <div class="max-w-7xl mx-auto relative z-10">
         <div class="flex flex-col lg:flex-row items-start lg:items-center gap-10">
@@ -357,11 +372,183 @@
     </div>
 </section>
 
-<!-- ════ Section 5: Solutions — БЛОК 3 ════
-     Новая секция ПЕРЕД футером.
-     Логика: завершает нарративную дугу всей главы:
-     теория (S2) → конфликт (S3) → упадок (S4) → решения (S5).
-     Без этого глава заканчивалась бы на пессимизме. -->
+<!-- ════ НОВАЯ СЕКЦИЯ: Постсоветское пространство ════
+     Расположена между Gen Z и Выводами.
+     Логика: после глобального обзора — региональный фокус
+     на СНГ, создаёт мост к финальным выводам главы. -->
+<section class="border-t border-slate-200 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-20 py-24">
+
+        <!-- Заголовок секции -->
+        <div class="mb-16">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-primary font-bold text-xs uppercase tracking-[0.3em]">Региональный фокус</span>
+                <div class="cis-divider flex-1 max-w-[120px]"></div>
+            </div>
+            <h2 class="font-serif text-4xl lg:text-5xl text-deep-blue mb-4">
+                От мировых трендов к реалиям <br class="hidden lg:block"/><span class="text-primary">постсоветского пространства</span>
+            </h2>
+            <p class="text-slate-500 max-w-3xl text-lg leading-relaxed">
+                Феномен религии как маркера «своих» и «чужих»: как глобальные процессы преломляются в уникальном контексте СНГ.
+            </p>
+        </div>
+
+        <!-- Два столбца: глобальный контекст + специфика СНГ -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+
+            <!-- Левая колонка: Глобальный контекст (краткий recap) -->
+            <div class="space-y-6">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <span class="material-symbols-outlined text-primary">language</span>
+                    </div>
+                    <h3 class="font-serif text-2xl text-deep-blue">Глобальный контекст: гибридность против традиций</h3>
+                </div>
+                <p class="text-base leading-relaxed text-slate-700">
+                    В современном мире религия перестала быть просто набором догм — она превратилась в важнейший маркер культурного самоопределения. В эпоху глобализации и массовой миграции религия часто становится ресурсом для сохранения идентичности в диаспоре.
+                </p>
+                <p class="text-base leading-relaxed text-slate-700">
+                    Одновременно с этим на Западе разворачиваются «культурные войны»: традиционные религиозные ценности вступают в жёсткий конфликт с прогрессивной светской этикой — в вопросах гендера, семьи, прав меньшинств. В ответ на это многие люди конструируют <span class="dotted-term" title="Совмещение элементов разных верований и светского гуманизма в единую систему идентичности">гибридные идентичности</span>, совмещая элементы разных верований и светского гуманизма.
+                </p>
+            </div>
+
+            <!-- Правая колонка: Специфика СНГ (вводная) -->
+            <div class="space-y-6">
+                <div class="flex items-center gap-3 mb-2">
+                    <div class="w-10 h-10 rounded-lg bg-deep-blue/10 flex items-center justify-center flex-shrink-0">
+                        <span class="material-symbols-outlined text-deep-blue">location_on</span>
+                    </div>
+                    <h3 class="font-serif text-2xl text-deep-blue">Специфика СНГ: религия как национальный код</h3>
+                </div>
+                <p class="text-base leading-relaxed text-slate-700">
+                    На постсоветском пространстве религия сыграла совершенно иную роль. После краха коммунистической идеологии образовался колоссальный <span class="dotted-term" title="Утрата обществом единой идеологической рамки, определявшей ценности и нормы">идеологический вакуум</span>, который заполнили традиционные конфессии.
+                </p>
+                <p class="text-base leading-relaxed text-slate-700">
+                    Религия здесь слилась с этносом и национальным строительством, став не просто частной верой, а несущей конструкцией коллективной идентичности целых народов.
+                </p>
+
+                <!-- Мини-стат -->
+                <div class="flex items-center gap-4 bg-background-light rounded-lg p-4 border border-slate-200">
+                    <span class="material-symbols-outlined text-primary text-3xl">sync_alt</span>
+                    <div>
+                        <p class="text-xs text-deep-blue font-bold uppercase tracking-wide leading-tight">Идеология → Религия</p>
+                        <p class="text-xs text-slate-500 mt-1">Смена идентификационного кода в постсоветских обществах после 1991 года</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карточки стран -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+
+            <!-- Россия -->
+            <div class="cis-country-card bg-background-light border border-slate-200 rounded-xl p-8 shadow-sm">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="country-flag bg-deep-blue/10">
+                        <span class="material-symbols-outlined text-deep-blue">church</span>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-xl text-deep-blue">Россия</h4>
+                        <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Православие · «Русский мир»</p>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                    Православие стало несущей конструкцией концепции «Русского мира», тесно переплетаясь с государственной риторикой. Быть русским для многих стало означать «быть православным».
+                </p>
+                <div class="pt-4 border-t border-slate-200">
+                    <div class="flex items-center gap-2 text-xs text-primary font-bold uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-sm">account_balance</span>
+                        Религия + Государство
+                    </div>
+                </div>
+            </div>
+
+            <!-- Казахстан (инвертированная — акцент) -->
+            <div class="cis-country-card bg-deep-blue border border-deep-blue rounded-xl p-8 shadow-sm">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="country-flag bg-primary/20">
+                        <span class="material-symbols-outlined text-primary">mosque</span>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-xl text-white">Казахстан</h4>
+                        <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Ислам · Ханафитский мазхаб</p>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                    Возрождение ислама — преимущественно традиционного ханафитского мазхаба — стало важнейшей частью восстановления национального кода и культуры после десятилетий советского подавления.
+                </p>
+                <div class="pt-4 border-t border-white/10">
+                    <div class="flex items-center gap-2 text-xs text-primary font-bold uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-sm">history</span>
+                        Культурное возрождение
+                    </div>
+                </div>
+            </div>
+
+            <!-- Балтия и Украина -->
+            <div class="cis-country-card bg-background-light border border-slate-200 rounded-xl p-8 shadow-sm">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="country-flag bg-deep-blue/10">
+                        <span class="material-symbols-outlined text-deep-blue">flag</span>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-xl text-deep-blue">Балтия и Украина</h4>
+                        <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Церковь · Независимость</p>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                    Традиционные церкви стали символами независимости и деколонизации, сыграв ключевую роль в формировании суверенной национальной идентичности.
+                </p>
+                <div class="pt-4 border-t border-slate-200">
+                    <div class="flex items-center gap-2 text-xs text-primary font-bold uppercase tracking-wider">
+                        <span class="material-symbols-outlined text-sm">verified</span>
+                        Деколонизация
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Проблема и решение — callout -->
+        <div class="weber-callout rounded-xl p-8 lg:p-10 space-y-5">
+            <div class="flex items-center gap-3 mb-2">
+                <div class="w-12 h-12 rounded-full bg-primary/15 border-2 border-primary/30 flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-primary text-xl">warning</span>
+                </div>
+                <div>
+                    <h3 class="font-serif text-xl text-deep-blue">Проблема и решение</h3>
+                    <p class="text-xs text-slate-400 uppercase tracking-widest font-bold mt-1">Постсоветский контекст</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Проблема -->
+                <div class="bg-white/80 rounded-lg p-6 border border-red-200/60">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="material-symbols-outlined text-red-500 text-lg">dangerous</span>
+                        <span class="text-red-600 font-bold text-xs uppercase tracking-[0.15em]">Угроза</span>
+                    </div>
+                    <p class="text-sm text-slate-700 leading-relaxed">
+                        Главная угроза в СНГ — использование религиозной идентичности для поиска политических врагов и исключения «нетрадиционных» меньшинств. Религия, ставшая синонимом нации, рискует превратиться в инструмент разделения.
+                    </p>
+                </div>
+                <!-- Решение -->
+                <div class="bg-white/80 rounded-lg p-6 border border-emerald-200/60">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="material-symbols-outlined text-emerald-600 text-lg">lightbulb</span>
+                        <span class="text-emerald-700 font-bold text-xs uppercase tracking-[0.15em]">Путь решения</span>
+                    </div>
+                    <p class="text-sm text-slate-700 leading-relaxed">
+                        Обществам необходимо развивать инклюзивную национальную идентичность, где гражданин любой веры — или атеист — чувствует себя полноценной частью государства. Гражданственность должна дополнять, а не подменять конфессиональную принадлежность.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- ── конец НОВОЙ СЕКЦИИ ── -->
+
+<!-- ════ Section 5: Solutions — БЛОК 3 ════ -->
 <section class="bg-white border-t border-slate-100 px-6 lg:px-20 py-24">
     <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
